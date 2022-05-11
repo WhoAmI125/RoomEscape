@@ -1,59 +1,14 @@
 Open-Source Software Practice Final Project Proposal
 
-Contact Info:
+# OSS Team 6
 
-|
+**Contact:**
 
-Name
-
- |
-
-Email
-
- |
-
-Phone Number
-
- |
-|
-
-HyunJoon Park
-
- |
-
-joell0526@gmail.com
-
- |
-
-010-7930-2961
-
- |
-|
-
-Hajong Kim
-
- |
-
-whoami125@g.skku.edu
-
- |
-
-010-9628-3928
-
- |
-|
-
-Yumin Heo
-
- |
-
-ymheo1123@gmail.com
-
- |
-
-010-9506-5809
-
- |
+| Name | Email | Phone Number |
+| --- | --- | --- |
+| HyunJoon Park | joell0526@gmail.com | 010-7930-2961 |
+| Hajong Kim | whoami125@g.skku.edu | 010-9628-3928 |
+| Yumin Heo | ymheo1123@gmail.com | 010-9506-5809 |
 
 Application Type: Web Page
 
