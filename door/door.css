@@ -12,12 +12,13 @@
 .door
 {
   background-color: saddlebrown;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position:absolute;
   top:0px;
   left:0px;
   width:200px;
   height:300px;
- 
+  border: solid black 4px;
   transform-origin: left;
   transition: all 0.5s ease-in-out;
 }
@@ -62,4 +63,26 @@
 .zoom:hover{
   transform: scale(1.2);
   transition-duration: 0.5s;
+}
+
+.doordesign1{
+  background-color: saddlebrown;
+  position:absolute;
+  top:20px;
+  left:30px;
+  width:125px;
+  height:75px;
+  border: 8px ridge #a57164;
+
+}
+
+.doordesign2{
+  background-color: saddlebrown;
+  position:absolute;
+  top:150px;
+  left:30px;
+  width:125px;
+  height:75px;
+  border: 8px ridge #a57164;
+
 }
