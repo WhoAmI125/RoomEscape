@@ -1,0 +1,65 @@
+.backDoor
+{
+  background-color: #333;
+  position:relative;
+  width:200px;
+  height:300px;
+  
+  margin: 0 auto;
+  margin-top:50px;
+}
+
+.door
+{
+  background-color: saddlebrown;
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:200px;
+  height:300px;
+ 
+  transform-origin: left;
+  transition: all 0.5s ease-in-out;
+}
+
+.doorOpen
+{
+  /*prespectiv creates the door open effect*/
+  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+}
+
+.doorknob{
+  background-color: bisque;
+  position:absolute;
+  top:120px;
+  left:160px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.movenext{
+  border: none;
+  background-color: #918E85;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+
+  position:absolute;
+  top:100px;
+  left:35px;
+  height: 30px;
+  width: 120px;
+  padding-top: 15px !important;
+  border-radius: 3%;
+}
+
+/*This is zoom class that can be applied to all*/
+.zoom:hover{
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
