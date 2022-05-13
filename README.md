@@ -53,44 +53,43 @@ Task assignment:
 
 <important>Final program might be different to final project proposal. </important>
 
+<br/>
+**Room Escape version 0.1: ~Sat (5.14)**
 
-**개발 1차: ~토요일(5.14)**
+*Notice*
 
-박현준:
+- each room is made by absolute postion, without considering relative
 
-팝업창 + 문제 UI
+- READ.ME is created to follow up the patch notes and
 
-javascript, NPM 문제
+HyunJoon Park:
 
-허유민:
+- pop up menu + question UI
 
-기본 html 문 위치 고정형 세팅 + 기본 방 설정
+- questions about javascript, NPM
 
-git 문제
 
-김하종:
+Yumin Heo:
 
-문 여는 모션 + 마우스 커서 물체 이동 줌
+- basic html door placement setting and room setting (all with absolute position)
 
-html css 문제
+- questions about git
 
--   각 방은 반응형 생각 안하고 고정으로 설정해주기
 
--   문 여는 모션 (자바스크립트) <https://codepen.io/am_eu/pen/EgedaQ> / 문고리 추가.
+Hajong Kim:
 
--   클릭 가능한 물체는 마우스 커서 물체에 이동시 줌인
+- animation opening the door and zoom-in animation when curser is on the object (took check if that object is able to click)
 
--   깃헙 read.me에 문제 설명 글
+-questions about html and css
 
--   문제 팝업
 
--   중요: 역할,파트,코드 분배 및 통합
 
 객관식 퀴즈UI 예제
 
 ![](https://lh6.googleusercontent.com/28vZNzy45kRQCzD6xsNB-uRGi409EYaPr0e0Cyo8mlOu9Aa1j6fKBjqyJvruVNqGSXOYphGY8EPBEKvBmdLUCx7NJ_Cjq68f0-sf9HM2kcRuFL_kydqMn_nLvfujoeYkIw0d3tYICNyq1Pm6dg)
 
-**개발 2차 ~수요일(5.18)**
+<br/>
+**Room Escape version 0.2 ~Wed(5.18)**
 
 -   문제 다 풀면 다른 방 이동 (문제는 10개정도)
 
@@ -98,7 +97,8 @@ html css 문제
 
 -   Intro webpage :처음에 사이트 접속하면 납치 배경 줄거리 스토리 팝업
 
-**개발 3차  ~금요일(5.20)**
+<br/>
+**Room Escape version 0.3  ~Fri(5.20)**
 
 -   제한 시간 타이머 
 
