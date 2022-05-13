@@ -54,6 +54,7 @@ Task assignment:
 <important>Final program might be different to final project proposal. </important>
 
 <br/>
+
 **Room Escape version 0.1: ~Sat (5.14)**
 
 *Notice*
@@ -89,6 +90,7 @@ Hajong Kim:
 ![](https://lh6.googleusercontent.com/28vZNzy45kRQCzD6xsNB-uRGi409EYaPr0e0Cyo8mlOu9Aa1j6fKBjqyJvruVNqGSXOYphGY8EPBEKvBmdLUCx7NJ_Cjq68f0-sf9HM2kcRuFL_kydqMn_nLvfujoeYkIw0d3tYICNyq1Pm6dg)
 
 <br/>
+
 **Room Escape version 0.2 ~Wed(5.18)**
 
 -   문제 다 풀면 다른 방 이동 (문제는 10개정도)
@@ -98,6 +100,7 @@ Hajong Kim:
 -   Intro webpage :처음에 사이트 접속하면 납치 배경 줄거리 스토리 팝업
 
 <br/>
+
 **Room Escape version 0.3  ~Fri(5.20)**
 
 -   제한 시간 타이머 
