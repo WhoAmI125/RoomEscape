@@ -72,17 +72,17 @@
   left:30px;
   width:125px;
   height:75px;
-  border: 8px ridge #a57164;
+  border: 6px inset #a57164;
 
 }
 
 .doordesign2{
   background-color: saddlebrown;
   position:absolute;
-  top:150px;
+  top:155px;
   left:30px;
   width:125px;
   height:75px;
-  border: 8px ridge #a57164;
+  border: 6px inset #a57164;
 
 }
