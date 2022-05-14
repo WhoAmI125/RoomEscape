@@ -3,9 +3,10 @@
 */
 .baseRoom{              /*  방 기본 화면 설정 - 크기: 1200*600 absolute, z-index: 0(제일 뒤)   */
     background-color: beige;
-    width: 100%;
-    height: 100%;
-    position:absolute;
+    width: 1500px;
+    height: 720px;
+    margin: 0;
+    position: absolute;
     z-index: -100;
 }
 .obj{
@@ -15,8 +16,8 @@
 .baseFloor{             /*  바닥 설정*/
     z-index: -1;
     position: absolute;
-    bottom:0;           /*baseRoom(방 내부 화면) 기준 absolute 좌표*/
-    height: 80px;
+    bottom: 0;           /*baseRoom(방 내부 화면) 기준 absolute 좌표*/
+    height: 150px;
     width: inherit;
     background-color: rebeccapurple;
 }

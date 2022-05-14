@@ -119,3 +119,8 @@ Hajong Kim:
 
 -   미니 게임-방향 키 조작게임
 <https://www.youtube.com/watch?v=NiG2TnZiFL0&ab_channel=TraversyMedia>
+
+
+**Notes**
+- Discussion 5.14: fixed or relative screen size
+ Decided to use fixed pixel screen size

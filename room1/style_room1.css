@@ -1,12 +1,11 @@
 /*이미지(스타일)는 임시로 아무렇게나 한거고 나중에 바꿀 예정*/
 .room1{
     background-image: url("./wall1.png");
-    background-size: cover;
+    background-size:cover;
 }
 .floor1{
     background-image: url("./floor1.png");
     position: absolute;
-    height: 200px;
     background-size: cover;
 }
 

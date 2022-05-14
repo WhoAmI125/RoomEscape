@@ -8,21 +8,20 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="./style_base.css"> <!--room 공통 css-->
-        <link rel="stylesheet" type="text/css" href="./room1/style_room1.css"> <!-- 각 room별 css (폴더 따로 정리하는게 좋을 듯)-->
+        <link rel="stylesheet" type="text/css" href="./room3/style_room3.css"> <!-- 각 room별 css (폴더 따로 정리하는게 좋을 듯)-->
         <!-- Door -->
-        <link rel="stylesheet" type="text/css" href="./door/door.css">  <!--href 경로 수정-->
+        <link rel="stylesheet" type="text/css" href="./door/door.css">
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
         <script type="text/javascript" src="./door/door.js"></script>
     </head>
     <body>
         <div class=""> <!-- Container 지움 -->
-            <div class="baseRoom room1">            <!--baseRoom: 방 공통 설정(style_base.css) // room1, door1... : 상세 설정(style_room1.css)-->
-                <div class="example1 obj zoom"></div>    <!--example1: 그냥 예시 샘플 소파... 나중에 지우고 바꿀 것임-->
-                <div class="baseFloor floor1"></div>
+            <div class="baseRoom room3">
+                <div class="baseFloor floor3"></div>
 
                 <!-- This is html css javascript for door-->
                 <div class="baseDoor zoom">
-                    <a class="button movenext zoom" href="./room2.html">Move to Next Room</a>
+                    <a class="button movenext zoom" href="./roomEnd.html">Move to Next Room</a>
                     <div class="door"> 
                     <div class= "doordesign1">
                     </div>
