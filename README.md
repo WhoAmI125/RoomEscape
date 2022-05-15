@@ -97,6 +97,17 @@ Hajong Kim:
 
 -   방에 물체 배치
 
+HyunJoon Park:
+
+- question answer determine
+
+Hajong Kim:
+
+- Create Lock for the door
+
+
+Yumin Heo:
+
 -   Intro webpage :처음에 사이트 접속하면 납치 배경 줄거리 스토리 팝업
 
 <br/>
