@@ -99,7 +99,7 @@ Hajong Kim:
 
 HyunJoon Park:
 
-- question answer determine
+- question answer determine if it is correct or not
 
 Hajong Kim:
 
@@ -108,7 +108,7 @@ Hajong Kim:
 
 Yumin Heo:
 
--   Intro webpage :처음에 사이트 접속하면 납치 배경 줄거리 스토리 팝업
+-   Intro webpage : Pop-up about story of kidnap when index.html is firsted loaded
 
 <br/>
 
