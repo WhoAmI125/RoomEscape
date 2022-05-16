@@ -1,3 +1,5 @@
 #ignore README.md for every that exists
 
 *.md
+.DS_Store
+
