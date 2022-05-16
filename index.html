@@ -12,10 +12,28 @@
         <!-- Door -->
         <link rel="stylesheet" type="text/css" href="./door/door.css">  <!--href 경로 수정-->
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-        <script type="text/javascript" src="./door/door.js"></script>
+        <!-- Intro -->
+        <link rel="stylesheet" type="text/css" href="./intro/intro.css">
+        
     </head>
     <body>
-        <div class=""> <!-- Container 지움 -->
+        <div id="popup_bg">
+            <div class="intro_window">
+                <div class="intro">
+                    <div id="scene1">
+                        <div class="eye eye_l"></div>
+                        <div class="eye eye_r"></div>
+                    </div>
+                    <div id="scene2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="intro_text"><br>
+            <div id="intro_txtContents">..?</div><br>
+            <div id="intro_helper">(Click here to continue)</div>
+        </div>
+        <div> <!-- Container 지움 -->
             <div class="baseRoom room1">            <!--baseRoom: 방 공통 설정(style_base.css) // room1, door1... : 상세 설정(style_room1.css)-->
                 <div class="example1 obj zoom"></div>    <!--example1: 그냥 예시 샘플 소파... 나중에 지우고 바꿀 것임-->
                 <div class="baseFloor floor1"></div>
@@ -36,9 +54,7 @@
             </div>
             <div class="top"><h3>Room Escape</h3></div>
         </div>
-
-        
-    
+        <script type="text/javascript" src="./intro/intro.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 </html>
