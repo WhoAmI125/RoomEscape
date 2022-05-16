@@ -4,7 +4,8 @@
 .baseRoom{              /*  방 기본 화면 설정 - 크기: 1200*600 absolute, z-index: 0(제일 뒤)   */
     background-color: beige;
     width: 100%;
-    aspect-ratio: 16/7;
+    height: 100%;
+    padding-bottom: 56.25%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */ 
     margin: 0;
     position: absolute;
     z-index: -100;
