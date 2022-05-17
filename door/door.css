@@ -137,9 +137,9 @@
   font-weight: bold;
 }
 
-.closeAnswer:hover,
-.closeAnswer:focus {
+.closeAnswer:hover, .closeAnswer:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
+

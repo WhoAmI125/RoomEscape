@@ -35,7 +35,7 @@
                 <div id="answerModal" class="modal">
                     <!-- Modal content -->
                     <div class="modal-content">
-                        <span class="closeAnswer">&times;</span>
+                        <span class="closeAnswer" style="text-align: right !important;">&times;</span>
                         <h3> Input the correct answer to unlock the door.</h3>
                         <table style="width:100%">
                         <tr>
@@ -46,7 +46,9 @@
                         </tr>
                         </table>
                         <row><br></row>
-                        <button class="submit" onclick="return unlock();" type="submit" style="font-size: 30px; background-color: olive;">Submit</button>
+                        <div>
+                            <button class="submit" onclick="return unlock();" type="submit" style="font-size: 30px; background-color: olive; width: 150px;">Submit</button>
+                        </div>
                     </div>
                 </div>
                 <script type="text/javascript" src="/door/door.js"></script>
