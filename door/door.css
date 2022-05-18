@@ -84,7 +84,7 @@
 
 #lockimg {
   position: relative;
-  background: url("/door/lock.png");
+  background: url("./lock.png");
   background-position: center;
   background-size: cover;
   width: 50px;
