@@ -40,16 +40,37 @@
 
                 <!-- This is html css javascript for door-->
                 <div class="baseDoor zoom">
+                    <button role="button" id="lockimg"></button>
+
                     <a class="button movenext zoom" href="./room2.html">Move to Next Room</a>
-                    <div class="door"> 
-                    <div class= "doordesign1">
-                    </div>
+                    <div class="door">
+                    <div class= "doordesign1"></div>
                     <div class="doordesign2"></div>
                     <div class="doorknob">
                     </div>
                     </div>
                 </div>
-                <script type="text/javascript" src="./door/door.js"></script>
+                <!-- The Modal -->
+                <div id="answerModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="closeAnswer" style="text-align: right !important;">&times;</span>
+                        <h3> Input the correct answer to unlock the door.</h3>
+                        <table style="width:100%">
+                        <tr>
+                            <td><input type="text" class="mytext" id="first" maxlength="1" style="height:40px; width:40px; text-align: center; font-size: 20px;">
+                            <input type="text" class="mytext" id="second" maxlength="1" style="height:40px; width:40px; text-align: center; font-size: 20px;">
+                            <input type="text" class="mytext" id="third" maxlength="1" style="height:40px; width:40px; text-align: center; font-size: 20px;">
+                            <input type="text" class="mytext" id="fourth" maxlength="1" style="height:40px; width:40px; text-align: center; font-size: 20px;"></td>
+                        </tr>
+                        </table>
+                        <row><br></row>
+                        <div>
+                            <button class="submit" onclick="return unlock();" type="submit" style="font-size: 30px; background-color: olive; width: 150px;">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript" src="/door/door.js"></script>
                 <!-- End Here-->
             </div>
             <div class="top"><h3>Room Escape</h3></div>

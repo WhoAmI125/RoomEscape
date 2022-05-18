@@ -80,3 +80,66 @@
   border: 6px inset #a57164;
 
 }
+
+
+#lockimg {
+  position: relative;
+  background: url("/problemUI/lock.png");
+  background-position: center;
+  background-size: cover;
+  width: 50px;
+  height: 70px;
+
+  top: 115px;
+  left: 150px;
+  z-index: 1;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 1000px;
+  height: 400px;
+  text-align: center;
+  font-size: 40px;
+}
+
+/* The Close Button */
+.closeAnswer {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeAnswer:hover, .closeAnswer:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+

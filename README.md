@@ -133,5 +133,8 @@ Yumin Heo:
 
 
 **Notes**
+- each room is made by absolute postion, without considering relative
+- READ.ME is created to follow up the patch notes and
 - Discussion 5.14: fixed or relative screen size
- Decided to use fixed pixel screen size
+- Decided to use fixed pixel screen size
+- To check branch of remote, create own local branch, pull the remote branch to check the update
