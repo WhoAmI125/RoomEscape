@@ -93,6 +93,7 @@
   top: 115px;
   left: 150px;
   z-index: 1;
+  border: none;
 }
 
 /* The Modal (background) */
@@ -143,3 +144,8 @@
   cursor: pointer;
 }
 
+.submit {
+  font-size: 30px; 
+  background-color: olive; 
+  width: 150px;
+}

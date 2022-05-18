@@ -1,43 +1,26 @@
-Open-Source Software Practice Final Project Proposal
+# Room Escape Game
 
-# OSS Team 6
-
-**Contact:**
-
-| Name | Email |
-| --- | --- |
-| HyunJoon Park | joell0526@gmail.com |
-| Hajong Kim | whoami125@g.skku.edu |
-| Yumin Heo | ymheo1123@gmail.com |
-
-**Application Type:** Web Page
-
-**Theme:** Room Escape
+###### Made by OSS Team 6: HyunJoon Park, Hajong Kim, Yumin Heo
 
 Our project "Escape Room" tried to solve the problem that learning new lessons can be boring by interacting questions about HTML, Git, and JavaScript with Room Escape. Our project offers visual entertainment that attracts users and provides entertainment while solving the questions.
 
 The web page provides several different questions inside the room. The user can only open the exit and escape the room by solving all problems and obtaining hints by solving the questions.
 
-**Sketch:** (This is just a prototype. so it can be changed during development process)\
 ![](https://lh3.googleusercontent.com/Biksr4mYBk2y-_N_V3Ns_2u5HsSjTkHBziXpvFJBCvrvUB3B5Ua5b5OJx0q-DIaVpTKiVsmGzCL28BwFx6ejj2mK6dnTxvplIip54elUvhwqnvzwCDAjsmF-gkMXD5UZUnjPxdH_SH7bElPLug)
 
-https://docs.google.com/presentation/d/1qPlLAaRfnX6PM1l_u-RzpKxGYREmou4DWEVOWtAEkfw/edit?usp=sharing
+**Features:**
 
-**Features:**  (This is just a prototype. so it can be changed during development process) 
-
-There is a main room, and several rooms which can be accessed by solving problems. Each room provides several different questions. Questions are provided with visual contents that the user may enjoy.  The user has to know the features of HTML, Git and JavaScript to find the answer. If the user finds all the answers and solves the questions, the user can escape the room. It is a success when the user escapes every room.
+There is a main room, and several rooms which can be accessed by solving problems. Each room provides several different questions. Questions are provided with visual contents.  The user has to know the features of HTML, Git and JavaScript to find the answer. If the user finds all the answers and solves the questions, the user can will receive hint to unlock the door and escape the room. It is a success when the user escapes every room.
 
 **Usage scenario:**  
 
-(This is just a prototype. so it can be changed during development process) 
+1.  The index.html will be the main room that will start. There would be pop-up explain about the stoy
 
-1.  The homepage will be the main room
+2.  In the room, there will be objects that can be clicked and solve the questions to receive the hint. 
 
-2.  In the top of the room, there would be a lock, by clicking on lock will move to another link. The user needs to find out the password to escape the room
+3.  The hints received by solving the questions will be used to unlock the door and leave to the next room.
 
-3.  There are several different questions that user needs to solve to find out the hint for the password of the lock
-
-Task assignment:
+**Task assignment:**
 
 1.  Designing rooms
 
@@ -51,90 +34,69 @@ Task assignment:
 
 6.  Implementing reactions and web page movements by HTML & CSS & JavaScript
 
-<important>Final program might be different to final project proposal. </important>
-
 <br/>
+
+**Contact:**
+
+| Name | Email |
+| --- | --- |
+| HyunJoon Park | joell0526@gmail.com |
+| Hajong Kim | whoami125@g.skku.edu |
+| Yumin Heo | ymheo1123@gmail.com |
+
+*Notes*
+- each room is made by absolute postion, without considering relative
+- READ.ME is created to follow up the patch notes
+- Discussion 5.14: fixed or relative screen size
+- Decided to use fixed pixel screen size
+- To check branch of remote, create own local branch, pull the remote branch to check the update
+<br/><br/>
+
+**Room Escape version 0.2 ~Thurs (5.19)**
+
+- Everyone decorates own room with questions
+<br/><br/>
+
+
+<strong> HyunJoon Park : </strong>
+
+- question answer determine if it is correct or not
+<br/><br/>
+
+
+<strong> Hajong Kim :</strong>
+
+- Create Lock for the door
+<br/><br/>
+
+
+<strong> Yumin Heo : </strong>
+-   Intro webpage : Pop-up about story of kidnap when index.html is firsted loaded
+
+<br/><br/>
 
 **Room Escape version 0.1: ~Sat (5.14)**
 
-*Notice*
-
-- each room is made by absolute postion, without considering relative
-
-- READ.ME is created to follow up the patch notes and
-
-HyunJoon Park:
-
-- pop up menu + question UI
-
-- questions about javascript, NPM
-
-
-Yumin Heo:
+<strong> Yumin Heo : </strong>
 
 - basic html door placement setting and room setting (all with absolute position)
 
 - questions about git
 
 
-Hajong Kim:
+<strong> Hajong Kim :</strong>
 
 - animation opening the door and zoom-in animation when curser is on the object (took check if that object is able to click)
 
 -questions about html and css
 
+<strong> HyunJoon Park : </strong>
 
+- pop up menu + question UI
 
-객관식 퀴즈UI 예제
+- questions about javascript, NPM
+
+Question UI Example : 
 
 ![](https://lh6.googleusercontent.com/28vZNzy45kRQCzD6xsNB-uRGi409EYaPr0e0Cyo8mlOu9Aa1j6fKBjqyJvruVNqGSXOYphGY8EPBEKvBmdLUCx7NJ_Cjq68f0-sf9HM2kcRuFL_kydqMn_nLvfujoeYkIw0d3tYICNyq1Pm6dg)
-
 <br/>
-
-**Room Escape version 0.2 ~Wed(5.18)**
-
--   문제 다 풀면 다른 방 이동 (문제는 10개정도)
-
--   방에 물체 배치
-
-HyunJoon Park:
-
-- question answer determine if it is correct or not
-
-Hajong Kim:
-
-- Create Lock for the door
-
-
-Yumin Heo:
-
--   Intro webpage : Pop-up about story of kidnap when index.html is firsted loaded
-
-<br/>
-
-**Room Escape version 0.3  ~Fri(5.20)**
-
--   제한 시간 타이머 
-
--   문제 풀면 아이템 상태 바뀌기
-
--   자물쇠 시도 횟수 제한
-
-추가 시간 남으면
-
--   힌트
-
--   라이프 바
-
-![](https://lh6.googleusercontent.com/ocgyhsuUilCC_UCqXUx3gaNDyNqKKtZQ2VwjyDyD4hV9vuB2IENi2WwLBT-ufbpDc90eSmxdtM8TEGS3X_NZYvd04JbIJZMI6ttK52WH2klyIgVDBKXgEHoTn1ceTtYGB5PE7Nod-v42iK2zFQ)
-
--   미니 게임-방향 키 조작게임
-<https://www.youtube.com/watch?v=NiG2TnZiFL0&ab_channel=TraversyMedia>
-
-
-**Notes**
-- each room is made by absolute postion, without considering relative
-- READ.ME is created to follow up the patch notes and
-- Discussion 5.14: fixed or relative screen size
-- Decided to use fixed pixel screen size
-- To check branch of remote, create own local branch, pull the remote branch to check the update
