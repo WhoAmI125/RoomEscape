@@ -14,12 +14,12 @@
     bottom: 50px;
     left: 900px;
 }
-.table{
-    background-image: url("./table.png");
+.table1{
+    background-image: url("./table1.png");
     background-size:cover;
     width: 200px;
     height: 200px;
-    bottom: 50px;
+    bottom: 70px;
     left: 100px;
 }
 .box{
