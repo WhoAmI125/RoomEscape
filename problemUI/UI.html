@@ -27,26 +27,26 @@
         <div class="modal-content">
             <span class="close">&times;</span>
 
-            <form name="quiz" method="post" name="buttons" id="quiz" onsubmit="return false">
 
-                <li>
-                    <div class="question">Which of the following keywords is used to define a variable in Javascript?
-                    </div>
-                </li>
-                <input id="answer" type="radio" name="group1" value="wrong"> createVariable<br>
-                <input id="answer" type="radio" name="group1" value="wrong"> intvar<br>
-                <input id="answer" type="radio" name="group1" value="correct"> var <br>
 
-                <li>
-                    <div class="question">What is the result of function? </div>
-                </li>
-                <oi><img src="problem1.png" class="mb-2 d-block"></oi>
-                <input id="answer" type="radio" name="group2" value="wrong">105 as string<br>
-                <input id="answer" type="radio" name="group2" value="correct">105 as integer value<br>
-                <input id="answer" type="radio" name="group2" value="wrong">NaN<br>
+            <li>
+                <div class="question">Which of the following keywords is used to define a variable in Javascript?
+                </div>
+            </li>
+            <input id="answer" type="radio" name="group1" value="wrong"> createVariable<br>
+            <input id="answer" type="radio" name="group1" value="wrong"> intvar<br>
+            <input id="answer" type="radio" name="group1" value="correct"> var <br>
 
-                <button class="submit" onclick="return handleClick();" type="submit">Submit</button>
-            </form>
+            <li>
+                <div class="question">What is the result of function? </div>
+            </li>
+            <oi><img src="problem1.png" class="mb-2 d-block"></oi>
+            <input id="answer" type="radio" name="group2" value="wrong">105 as string<br>
+            <input id="answer" type="radio" name="group2" value="correct">105 as integer value<br>
+            <input id="answer" type="radio" name="group2" value="wrong">NaN<br>
+
+            <button class="submit" onclick="return handleClick();" type="submit">Submit</button>
+
         </div>
 
     </div>
@@ -62,14 +62,11 @@
             <span class="close">&times;</span>
             <div class="rectangle mx-auto"> How to check node.js version? </div>
 
-            
+
 
             <button class="btn" id="1" onClick="reply_click(this.id)">node -v</button>
             <button class="btn" id="2" onClick="reply_click(this.id)">node -v -c</button>
             <button class="btn" id="3" onClick="reply_click(this.id)">node checkout version</button>
-
-           
-
 
 
         </div>
@@ -92,23 +89,23 @@
             <row>
                 <col>
                 <input type="text" class="mytext" id="first" maxlength="1">
-            </col>
-            <col>
+                </col>
+                <col>
                 <input type="text" class="mytext" id="second" maxlength="1">
-            </col>
-            <col>
+                </col>
+                <col>
                 <input type="text" class="mytext" id="third" maxlength="1">
-            </col>
-            <col>
+                </col>
+                <col>
                 <input type="text" class="mytext" id="fourth" maxlength="1">
-            </col>
-            <row><br> <br> </row>
-            
+                </col>
+                <row><br> <br> </row>
+
             </row>
             <button class="submit" onclick="return digitCheck();" type="submit">Submit</button>
 
 
-           
+
         </div>
 
     </div>
@@ -139,7 +136,7 @@
         var span2 = document.getElementsByClassName("close")[1];
         var span3 = document.getElementsByClassName("close")[2];
 
-        // When the user clicks the button, open the modal 
+        // When the user clicks the button, open the modal
         btn.onclick = function () {
             modal.style.display = "block";
         }
@@ -175,50 +172,69 @@
             }
         }
 
-        // 정답의 개수가 1개 이상.
+        // 모두 다 정답이어야 올바른 힌트를 얻을 수 있음.
         function handleClick() {
             var amountCorrect = 0;
+            var totalCorrect = 0;
+
             for (var i = 1; i <= 2; i++) {
+                // i 는 radiobutton에 부여한 name 'group'+'i'.
+                // i의 조건 범위는 문항 개수와 group'i' 따라 달라짐.
                 var radios = document.getElementsByName('group' + i);
+                // button에 부여한 name group1, group2... 에 따라 radiobutton 불러옴.
+
                 for (var j = 0; j < radios.length; j++) {
                     var radio = radios[j];
-                    if (radio.value == "correct" && radio.checked) {
-                        amountCorrect++;
+                    if (radio.value == "correct") {
+                        // radio button에 부여한 value가 correct 정답이면 총 정답 수 증가.
+
+                        totalCorrect++;
+                        if (radio.checked) {
+                            // value가 correct인 radiobutton을 선택했으면 정답 문제 수도 추가.
+                            amountCorrect++;
+                        }
                     }
+
                 }
             }
-            
-            alert("Correct Responses: " + amountCorrect);
+
+            if (amountCorrect == totalCorrect) { // 모든 문제를 맞추면 올바른 힌트.
+                alert("올바른 힌트 ");
+                totalCorrect = 0;
+            }
+            else {
+                alert("이상한 힌트"); // 그렇지 않으면 이상한 힌트를 제공.
+                totalCorrect = 0;
+            }
         }
 
 
         // 딱 한번의 기회만 주어지는 클릭 함수.
         function reply_click(clicked_id) {
-           var answer=1
-           var choice=clicked_id
-           if (answer==choice){
-               alert("정답");
-           }
-           else{
-               alert("오답");
-           }
-
-           
+            var answer = 1
+            var choice = clicked_id
+            if (answer == choice) { // 정답이면 방탈출 힌트 제공.
+                alert("정답, 힌트 제공");
+            }
+            else { // 틀리면 페이지가 새로고침되어 다시 시작
+                alert("오답");
+                document.location.reload();
+            }
         }
 
         // 자물쇠 형식.
-        function digitCheck(){
-            if (document.getElementById('first').value==1 && document.getElementById('second').value==6 && document.getElementById('third').value==0 && document.getElementById('fourth').value==1   ){
-                alert("정답");
+        function digitCheck() {
+            if (document.getElementById('first').value == 1 && document.getElementById('second').value == 6 && document.getElementById('third').value == 0 && document.getElementById('fourth').value == 1) {
+                alert("정답, 힌트 제공");
             }
-             else{
+            else {
                 alert("오답");
-             }
-      
+            }
+
 
         }
 
-        
+
 
     </script>
 
