@@ -17,7 +17,41 @@
     <body>
         <div class=""> <!-- Container 지움 -->
             <div class="baseRoom room2">
+
+                <!-- Objects-->
                 <div class="baseFloor floor2"></div>
+                <div class="mountain obj zoom" type="button" role="button" id="btnMountain"></div>
+
+ 
+                <div class="table obj"></div> 
+                <div class="book obj zoom"></div>
+                <div class="laptop obj zoom"></div>
+                
+                <div class="bookshelf obj"></div> 
+                <div class="bag obj zoom"></div> 
+                <div class="vault obj zoom"></div>
+                <div class="trashcan obj zoom"></div> 
+
+                
+                <!-- The Modal -->
+                <div id="mountainModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="rectangle mx-auto"> What is correct html tag to input image? </div>
+                        <image src="./room2/mountain.png" style="height: 150px; margin-left: auto; margin-right: auto; width: 50%;"></image>
+                        <br>
+                        <button class="btn" id="mountain1" onClick="reply_click(this.id)"><p>&lt;image src=&quot;image.png&quot; alt=&quot;MyImage&quot;&gt;</p></button>
+                        <button class="btn" id="mountain2" onClick="reply_click(this.id)"><p>&lt;image scr=&quot;image.png&quot; alt=&quot;MyImage&quot;&gt;</p></button>
+                        <button class="btn" id="mountain3" onClick="reply_click(this.id)"><p>&lt;image url=&quot;image.png&quot; alt=&quot;MyImage&quot;&gt;</p></button>
+                        <button class="btn" id="mountain4" onClick="reply_click(this.id)"><p>&lt;image link=&quot;image.png&quot; alt=&quot;MyImage&quot;&gt;</p></button>
+
+
+                    </div>
+
+                </div>
+
+                <script type="text/javascript" src="./room2/script_room2.js"></script>   
 
                 <!-- This is html css javascript for door-->
                 <div class="baseDoor zoom">
@@ -45,16 +79,15 @@
                             <input type="text" class="mytext" id="fourth" maxlength="1" style="height:40px; width:40px; text-align: center; font-size: 20px;"></td>
                         </tr>
                         </table>
-                        <row><br></row>
+                        <br><br>
                         <div>
-                            <button class="submit" onclick="return unlock();" type="submit" style="font-size: 30px; background-color: olive; width: 150px;">Submit</button>
+                            <button class="submit" onclick="return unlock();" type="submit">Submit</button>
                         </div>
                     </div>
                 </div>
-                <script type="text/javascript" src="/door/door.js"></script>
+                <script type="text/javascript" src="./door/door.js"></script>
                 <!-- End Here-->
             </div>
-            <div class="top"><h3>Room Escape</h3></div>
         </div>
 
         
