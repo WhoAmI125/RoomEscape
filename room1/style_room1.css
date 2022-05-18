@@ -1,19 +1,68 @@
 /*이미지(스타일)는 임시로 아무렇게나 한거고 나중에 바꿀 예정*/
 .room1{
-    background-image: url("./wall1.png");
-    background-size:cover;
+    background-color:wheat;
 }
 .floor1{
-    background-image: url("./floor1.png");
-    position: absolute;
-    background-size: cover;
+    background-color:gray;
 }
 
-.example1{
+.couch{
     background-image: url("./blue_couch.png");
     background-size: cover;
     width: 400px;
     height: 200px;
-    bottom: 25px;
-    left: 80px;
+    bottom: 50px;
+    left: 900px;
 }
+.table{
+    background-image: url("./table.png");
+    background-size:cover;
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    left: 100px;
+}
+.box{
+    background-image: url("./box.png");
+    background-size:cover;
+    width: 200px;
+    height: 150px;
+    bottom: 50px;
+    left: 1300px;
+    z-index: 1;
+}
+.flower{
+    background-image: url("./flower.png");
+    background-size: cover;
+    width: 220px;
+    height: 220px;
+    bottom: 240px;
+    left: 100px;
+}
+.rug{
+    background-image: url("./rug.png");
+    background-size:cover;
+    width: 330px;
+    height: 110px;
+    bottom: 30px;
+    left: 30px;
+    z-index: 1;
+}
+.frame{
+    background-image: url("./frame.png");
+    background-size:cover;
+    width: 256px;
+    height: 206px;
+    bottom: 350px;
+    z-index: 1;
+    left: 300px;
+}
+.clock{
+    background-image: url("./clock.png");
+    background-size:cover;
+    width: 150px;
+    height: 150px;
+    bottom: 450px;
+    left: 1000px;
+}
+
