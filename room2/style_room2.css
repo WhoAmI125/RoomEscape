@@ -4,3 +4,139 @@
 .floor2{
     background-color: #5D5C61;
 }
+
+.mountain{
+    background-image: url("./mountain.png");
+    background-size: cover;
+    width: 300px;
+    height: 150px;
+    bottom: 600px;
+    left: 180px;
+    border: groove #a57164 10px;
+    background-color: white;
+}
+
+.table{
+    background-image: url("./table.png");
+    background-size: cover;
+    width: 300px;
+    height: 220px;
+    bottom: 50px;
+    left: 980px;
+}
+
+.book{
+    background-image: url("./book.png");
+    background-size: cover;
+    width: 80px;
+    height: 50px;
+    bottom: 200px;
+    left: 1130px;
+}
+
+.laptop{
+    background-image: url("./laptop.png");
+    background-size: cover;
+    width: 100px;
+    height: 98px;
+    bottom: 210px;
+    left: 990px;
+}
+
+.vault{
+    background-image: url("./vault.png");
+    background-size: cover;
+    width: 130px;
+    height: 150px;
+    bottom: 495px;
+    left: 190px;
+}
+
+.trashcan{
+    background-image: url("./trashcan.png");
+    background-size: cover;
+    width: 130px;
+    height: 180px;
+    bottom: 60px;
+    left: 1280px;
+}
+
+.bookshelf{
+    background-image: url("./bookshelf.png");
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+    bottom: 110px;
+    left: 100px;
+}
+
+.bag{
+    background-image: url("./bag.png");
+    background-size: cover;
+    width: 95px;
+    height: 100px;
+    bottom: 145px;
+    left: 190px;
+}
+
+ /* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    z-index: 10;
+}
+  
+  /* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 1000px;
+    height: 650px !important;
+    text-align: center;
+    font-size: 40px;
+}
+  
+.close {
+    color: #aaaaaa;
+    text-align: right;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: olive;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    position:relative;
+  }
