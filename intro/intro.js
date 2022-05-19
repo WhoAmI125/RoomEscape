@@ -1,8 +1,10 @@
 let idx=0;
 // story
-const story=['What is this?','Where am I?','You are kidnapped.','You must solve the quiz and go out of these rooms.'];
-const changeLen=2;
-const storyLen=4;
+const story=['Where am I?','I can\'t remember...','What is this place?','What is this?','\"You are kidnapped because you didn\'t paid attention in Open-Source Software class.\"','\"You must solve the quiz to escape.\"','\"Or you will be locked up here and get a low grade...\"', '\"Good Luck!\"','I must get out of here!'];
+const changeLen1=2;
+const changeLen2=3;
+const changeLen3=8;
+const storyLen=9;
 
 document.querySelector('#intro_text').addEventListener("click",story_continue);
 window.onload=starting();
@@ -21,10 +23,20 @@ async function eye_opening(){
     document.getElementsByClassName("eye")[1].classList.add("eye_open");
 }
 function story_continue(){
-    if(idx==changeLen){
-        document.getElementById('popup_bg').style.display='none';
+    if(idx===changeLen1){
+        document.getElementsByClassName('intro')[0].style.visibility='hidden';
+        document.getElementsByClassName('eye')[0].style.display='none';
+        document.getElementsByClassName('eye')[1].style.display='none';
     }
-    if(idx===storyLen){
+    else if(idx===changeLen2){
+        document.getElementsByClassName('intro_notes')[0].style.visibility='visible';
+    }
+    else if(idx===changeLen3){
+        document.getElementsByClassName('intro_notes')[0].style.display='none';
+        document.getElementById('scene2').style.display='none';
+    }
+    else if(idx===storyLen){
+        document.getElementById('popup_bg').style.display='none';
         document.getElementById('intro_text').style.display='none';        
         return;
     }
