@@ -1,64 +1,314 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="./style_base.css"> <!--room 공통 css-->
-        <link rel="stylesheet" type="text/css" href="./room3/style_room3.css"> <!-- 각 room별 css (폴더 따로 정리하는게 좋을 듯)-->
-        <!-- Door -->
-        <link rel="stylesheet" type="text/css" href="./door/door.css">
-        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-        <script type="text/javascript" src="./door/door.js"></script>
-    </head>
-    <body>
-        <div class=""> <!-- Container 지움 -->
-            <div class="baseRoom room3">
-                <div class="baseFloor floor3"></div>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-                <!-- This is html css javascript for door-->
-                <div class="baseDoor zoom">
-                    <button role="button" id="lockimg"></button>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./style_base.css">
+    <!--room 공통 css-->
+    <link rel="stylesheet" type="text/css" href="./room3/style_room3.css"> <!-- 각 room별 css (폴더 따로 정리하는게 좋을 듯)-->
+    <!-- Door -->
+    <link rel="stylesheet" type="text/css" href="./door/door.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="./door/door.js"></script>
 
-                    <a class="button movenext zoom" href="./roomEnd.html">Move to Next Room</a>
-                    <div class="door">
-                    <div class= "doordesign1"></div>
+    <!-- Speech Bubble -->
+
+</head>
+
+<body>
+    <div class="">
+        <!-- Container 지움 -->
+        <div class="baseRoom room3">
+
+            <!-- Objects in Room3 -->
+            <div class="baseFloor floor3"></div>
+            <div class="programmer zoom obj" type="button" role="button" onClick="dontouch()" id="Programmer"> </div>
+            <div class="bubble obj zoom bubble-bottom-left" type="button" role="button" id="btnSpeechBubble"
+                contenteditable> 조교가 주는 과제를
+                첫번째로 <br>풀지 않으면 </br>넌 못.나.간.다 !</div>
+            <div class="desk obj" id="Desk">
+                <div class="monitor obj zoom" type="button" role="button" id="btnMonitor"> </div>
+                <div class="cube obj zoom" type="button" role="button" id="btnCube"> </div>
+            </div>
+            <div class="ProjectorScreencontainer">
+                <div class="ProjectorScreen obj zoom" type="button" role="button" id="btnProjectorScreen"> </div>
+            </div>
+            <div class="lampcontainer">
+                <div class="lamp obj" id="lamp"> </div>
+            </div>
+            <div class="jscontainer">
+                <div class="js obj zoom" type="button" role="button" id="btnJsLogo"> </div>
+            </div>
+
+            <!-- speechBubbleModal -->
+            <div id="speechBubbleModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content" style="height:1200px">
+                    <span class="close">&times;</span>
+
+                    <h2> 이번 퀴즈는 쉽게 냈습니다.</h2>
+
+                    <div class="question"> Which of the following keywords is used to define a variable in Javascript?
+
+                        <input id="answer" type="radio" name="group1" value="wrong"> createVar <br>
+                        <input id="answer" type="radio" name="group1" value="wrong"> decl-VAR <br>
+                        <input id="answer" type="radio" name="group1" value="correct"> var <br>
+                    </div>
+
+                    <div class="question">What would <em>arr.indexOf(0)</em> and <em>arr.indexOf(1)</em> return
+                        respectively, if arr holds the array [1, 5, 8]
+                        <br>
+                        <input id="answer" type="radio" name="group2" value="wrong">1 and -1<br>
+                        <input id="answer" type="radio" name="group2" value="correct"> -1 and 0 <br>
+                        <input id="answer" type="radio" name="group2" value="wrong"> 1 and 5 <br>
+                    </div>
+
+                    <div class="question">What does Array(10) return? <br>
+                        <input id="answer" type="radio" name="group3" value="wrong"> [10] <br>
+                        <input id="answer" type="radio" name="group3" value="correct"> An array with 10 empty slots <br>
+                        <input id="answer" type="radio" name="group3" value="wrong"> none <br>
+                    </div>
+
+               
+                    <img src="./room3/problem3.png" height="250" width="250">
+
+
+                    <div class="question">What is output being consoled? <br>
+                        <input id="answer" type="radio" name="group5" value="wrong"> [10] <br>
+                        <input id="answer" type="radio" name="group5" value="wrong"> [50,88] <br>
+                        <input id="answer" type="radio" name="group5" value="correct"> [10,50,88] <br>
+                    </div>
+
+                    <button class="submit mx-auto btn-success" onclick="return handleClick1();"
+                        type="submit">Submit</button>
+
+                </div>
+            </div>
+
+            <div id="monitorModal" class="modal">
+
+                <div class="modal-content" style="height:600px">
+                    <span class="close">&times;</span>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col mb-2">
+                                이 문제는 재시도가 주어지지 않습니다! 틀리면 가는 겁니다!
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mb-4">
+                                How to check installed node version ?
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mb-4">
+                                <button class="btn btn-outline-danger btn-lg" id="1" type="button"
+                                    onClick="reply_click(this.id)"> node get -v</button>
+                            </div>
+                            <div class="col mb-4">
+                                <button class="btn btn-outline-danger btn-lg" id="2" onClick="reply_click(this.id)">node
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mb-4">
+                                <button class="btn btn-outline-danger btn-lg" id="3" onClick="reply_click(this.id)">node
+                                    -v</button>
+                            </div>
+                            <div class="col mb-4">
+                                <button class="btn btn-outline-danger btn-lg" id="4" onClick="reply_click(this.id)">node
+                                    checkout version</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mb-4">
+                                <img src="./room3/gun.png" height="250" width="250">
+                                <img src="./room3/blood.png" height="250" width="250">
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>]
+
+
+            </div>
+
+            <div id="cubeModal" class="modal">
+
+                <div class="modal-content" style="height:800px">
+                    <span class="close">&times;</span>
+
+                    모든 빈칸을 맞추어 다음 힌트를 얻어내세요
+                    <h5 class="nowrap"> 1. In JS, String cannot be altered. However, </h5>
+                    <h5 class="nowrap"> you can use method <input class="fill-out" id="blank1"> to change string.
+                        </input></h5>
+
+                    <h5 class="nowrap"> 2. there are two equality operators in JS, <input class="fill-out" id="blank2">
+                        and </input> <input class="fill-out" id="blank3"> .</input> </h5>
+                    <h5 class="nowrap"> First one compares only variable <input class="fill-out" id="blank4">.</input>
+                        Second one compares variable <input class="fill-out" id="blank5">and variable</input> <input
+                            class="fill-out" id="blank6">.</input> </h5>
+
+                    <h5 class="nowrap">3. <input class="fill-out" id="blank7"></input> method applies the function f on
+                        each element and creates a new array with the elements whose boolean return values are <input
+                            class="fill-out" id="blank8">.</input> </h5>
+
+                    <h5 class="nowrap">4. Object can contain <input class="fill-out" id="blank9"></input> and <input
+                            class="fill-out" id="blank10"> in JS.</input> </h5>
+
+                    <h5 class="nowrap">5. Every Node project has a special JSONfile in its root directory, <input
+                            class="fill-out" id="blank11" style="width:200px"></input> . </h5>
+
+                    <button class="submit btn-info mx-auto" onclick="return FillInTheBlank();"
+                        type="submit">Submit</button>
+
+
+                </div>]
+
+            </div>
+
+            <div id="projectorScreenModal" class="modal">
+
+                
+                <div class="modal-content" style="height:1000px">
+                    <span class="close">&times;</span>
+
+                    <img src="./room3/problem1.png" height="300" width="300">
+                    <h5 class="nowrap"> 1. What is the output?</h5>
+
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+                        </label>
+                    </div>
+
+
+                    <img src="./room3/problem2.png" height="300" width="300">
+                    <h5 class="nowrap"> 2. What is the value of passed in the following code? </h5>
+
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="options" id="option1" autocomplete="off" checked> [42]
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option2" autocomplete="off"> true
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option2" autocomplete="off"> false
+                        </label>
+                    </div>
+
+             
+
+
+
+                    <button class="submit btn-info mx-auto mt-3" onclick="return FillInTheBlank();"
+                    type="submit">Submit</button>
+                </div>]
+
+            </div>
+
+            <div id="jsLogoModal" class="modal">
+
+                <div class="modal-content" style="height:500px">
+                    <span class="close">&times;</span>
+
+                    <h5 class="nowrap"> 마지막 js T/F 문제입니다. 딱 한문제라 재시도는 없죠. 파이팅! </h5>
+                    <div class="question">For a given array arr, the expressions arr[0] and arr.shift() both do the same
+                        thing. True or false? <br>
+                        <input id="answer" type="radio" name="lastproblem1" value="wrong"> True <br>
+                        <input id="answer" type="radio" name="lastproblem1" value="wrong"> False, arr[0] only returns
+                        whereas arr.shift() removes the first element <br>
+                        <input id="answer" type="radio" name="lastproblem1" value="correct"> False, arr[0] only returns
+                        whereas arr.shift() returns and removes first element <br>
+                    </div>
+
+                    <button class="submit mx-auto btn-success" onclick="return handleClick5();"
+                        type="submit">Submit</button>
+
+                </div>]
+
+            </div>
+
+
+            <script src="./room3/script_room3.js"></script>
+
+
+
+            <!-- This is html css javascript for door-->
+            <div class="baseDoor zoom">
+                <button role="button" id="lockimg"></button>
+
+                <a class="button movenext zoom" href="./roomEnd.html">Move to Next Room</a>
+                <div class="door">
+                    <div class="doordesign1"></div>
                     <div class="doordesign2"></div>
                     <div class="doorknob">
                     </div>
-                    </div>
                 </div>
-                <!-- The Modal -->
-                <div id="answerModal" class="modal">
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <span class="closeAnswer" style="text-align: right !important;">&times;</span>
-                        <h3> Input the correct answer to unlock the door.</h3>
-                        <table style="width:100%">
-                        <tr>
-                            <td><input type="text" class="mytext" id="first" maxlength="1" style="height:40px; width:40px; text-align: center; font-size: 20px;">
-                            <input type="text" class="mytext" id="second" maxlength="1" style="height:40px; width:40px; text-align: center; font-size: 20px;">
-                            <input type="text" class="mytext" id="third" maxlength="1" style="height:40px; width:40px; text-align: center; font-size: 20px;">
-                            <input type="text" class="mytext" id="fourth" maxlength="1" style="height:40px; width:40px; text-align: center; font-size: 20px;"></td>
-                        </tr>
-                        </table>
-                        <row><br></row>
-                        <div>
-                            <button class="submit" onclick="return unlock();" type="submit" style="font-size: 30px; background-color: olive; width: 150px;">Submit</button>
-                        </div>
-                    </div>
-                </div>
-                <script type="text/javascript" src="./door/door.js"></script>
-                <!-- End Here-->
             </div>
-            <div class="top"><h3>Room Escape</h3></div>
+
+            <!-- The Modal -->
+            <div id="answerModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="closeAnswer" style="text-align: right !important;">&times;</span>
+                    <h3> Input the correct answer to unlock the door.</h3>
+                    <table style="width:100%">
+                        <tr>
+                            <td><input type="text" class="mytext" id="first" maxlength="1"
+                                    style="height:40px; width:40px; text-align: center; font-size: 20px;">
+                                <input type="text" class="mytext" id="second" maxlength="1"
+                                    style="height:40px; width:40px; text-align: center; font-size: 20px;">
+                                <input type="text" class="mytext" id="third" maxlength="1"
+                                    style="height:40px; width:40px; text-align: center; font-size: 20px;">
+                                <input type="text" class="mytext" id="fourth" maxlength="1"
+                                    style="height:40px; width:40px; text-align: center; font-size: 20px;">
+                                <input type="text" class="mytext" id="fifth" maxlength="1"
+                                    style="height:40px; width:40px; text-align: center; font-size: 20px;">
+                            </td>
+                        </tr>
+                    </table>
+                    <row><br></row>
+                    <div>
+                        <button class="submit" onclick="return unlockRoom3();" type="submit"
+                            style="font-size: 30px; background-color: olive; width: 150px;">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
         </div>
 
-        
-    
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    </body>
+
+        <script type="text/javascript" src="./door/door.js"></script>
+        <!-- End Here-->
+    </div>
+
+    <div class="top" style="text-align:center; max-width: 100%;  max-height: 100%;">
+        <h3 class="bg-success text-white">open SW Room Escape- JS and Node</h3>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
 </html>
+
