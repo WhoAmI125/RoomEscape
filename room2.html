@@ -24,38 +24,114 @@
 
  
                 <div class="table obj"></div> 
-                <div class="book obj zoom"></div>
-                <div class="laptop obj zoom"></div>
+                <div class="book obj zoom" type="button" role="button" id="btnBook"></div>
+                <div class="laptop obj zoom" type="button" role="button" id="btnLaptop"></div>
                 
                 <div class="bookshelf obj"></div> 
-                <div class="bag obj zoom"></div> 
-                <div class="vault obj zoom"></div>
-                <div class="trashcan obj zoom"></div> 
+                <div class="bag obj zoom" type="button" role="button" id="btnBag"></div> 
+                <div class="vault obj zoom" type="button" role="button" id="btnVault"></div>
+                <div class="trashcan obj zoom" type="button" role="button" id="btnTrash"></div> 
 
                 
                 <!-- The Modal -->
                 <div id="mountainModal" class="modal">
                     <!-- Modal content -->
-                    <div class="modal-content">
+                    <div class="modal-content-mountain">
                         <span class="close">&times;</span>
                         <div class="rectangle mx-auto"> What is correct html tag to input image? </div>
                         <image src="./room2/mountain.png" style="height: 150px; margin-left: auto; margin-right: auto; width: 50%;"></image>
-                        <br>
+                        <br><br>
                         <button class="btn" id="mountain1" onClick="reply_click(this.id)"><p>&lt;image src=&quot;image.png&quot; alt=&quot;MyImage&quot;&gt;</p></button>
                         <button class="btn" id="mountain2" onClick="reply_click(this.id)"><p>&lt;image scr=&quot;image.png&quot; alt=&quot;MyImage&quot;&gt;</p></button>
                         <button class="btn" id="mountain3" onClick="reply_click(this.id)"><p>&lt;image url=&quot;image.png&quot; alt=&quot;MyImage&quot;&gt;</p></button>
                         <button class="btn" id="mountain4" onClick="reply_click(this.id)"><p>&lt;image link=&quot;image.png&quot; alt=&quot;MyImage&quot;&gt;</p></button>
-
-
                     </div>
+                </div>
 
+                <!-- The Modal -->
+                <div id="bookModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content-book" style="text-align: left;">
+                        <span class="close">&times;</span>
+                        <div class="rectangle1 mx-auto" style="text-align: center;"> What is the correct name for HTML? </div>
+                        <input id="answerBook" type="radio" name="group1" value="correct"> Hypertext Markup Language<br>
+                        <input id="answerBook" type="radio" name="group1" value="wrong"> Hyperlink Makeup Language<br>
+                        <input id="answerBook" type="radio" name="group1" value="wrong"> Hyperlink Markup Language<br>
+                        <br><br>
+                        <div class="rectangle1 mx-auto" style="text-align: center;"> What is the correct name for CSS? </div>
+                        <input id="answerBook" type="radio" name="group2" value="wrong"> Cascading Style Syntax<br>
+                        <input id="answerBook" type="radio" name="group2" value="correct"> Cascading Style Sheets<br>
+                        <input id="answerBook" type="radio" name="group2" value="wrong"> Coloring Style Syntax<br>
+                        <br><br>
+                        <button class="submit" onclick="return handleClick();" type="submit" style="margin-left: 40%;">Submit</button>
+                    </div>
+                </div>
+
+                <!-- The Modal -->
+                <div id="vaultModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content-vault">
+                        <span class="close">&times;</span>
+                        <div class="rectangle mx-auto"> How can you apply style to vault by id?</div>
+                        <image src="./room2/vaultquestion.png" style="height: 150px; margin-left: auto; margin-right: auto; width: 50%;"></image>
+                        <br><br>
+                        <button class="btn" id="vault1" onClick="reply_clickva(this.id)"><p>.vault</p></button>
+                        <button class="btn" id="vault2" onClick="reply_clickva(this.id)"><p>@vault</p></button>
+                        <button class="btn" id="vault3" onClick="reply_clickva(this.id)"><p>#vault</p></button>
+                        <button class="btn" id="vault4" onClick="reply_clickva(this.id)"><p>/vault</p></button>
+                    </div>
+                </div>
+
+                <!-- The Modal -->
+                <div id="laptopModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content-laptop">
+                        <span class="close">&times;</span>
+                        <div class="rectangle mx-auto"> To change this hyperlink without underline, what style should be applied?</div>
+                        <image src="./room2/hrefquestion.png" style="height: 150px; margin-left: auto; margin-right: auto; width: 50%;"></image>
+                        <br><br>
+                        <button class="btnla" id="laptop1" onClick="reply_clickla(this.id)"><p>a {text-underline-offset: none;}</p></button>
+                        <button class="btnla" id="laptop2" onClick="reply_clickla(this.id)"><p>a {text-underline-position: none;}</p></button>
+                        <button class="btnla" id="laptop3" onClick="reply_clickla(this.id)"><p>a {font-weight: none;}</p></button>
+                        <button class="btnla" id="laptop4" onClick="reply_clickla(this.id)"><p>a {text-decoration:none;}</p></button>
+                    </div>
+                </div>
+
+                <!-- The Modal -->
+                <div id="bagModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content-bag">
+                        <span class="close">&times;</span>
+                        <div class="rectangle mx-auto"> To make the door come front of table, what should be done?</div>
+                        <image src="./room2/indexquestion.png" style="height: 150px; margin-left: auto; margin-right: auto; width: 150px;"></image>
+                        <br><br>
+                        <form>
+                            <label for="Title">Input:</label>
+                            <input type="text" id="textAnswer" name="textAnswer" style="font-size: 15px; width: 550px;"><br><br>
+                            <input type="submit" value="Submit" onclick="return checktextbag();">
+                        </form>
+                    </div>
+                </div>
+
+                <!-- The Modal -->
+                <div id="trashModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content-trash" style="text-align: left;">
+                        <span class="close">&times;</span>
+                        <div class="rectangle1 mx-auto" style="text-align: center;"> Could &lt;a&gt; tag act as button? </div>
+                        <br>
+                        <input type="radio" id="trashAnswer1" name="trashans" value="correct"> Yes<br>
+                        <input type="radio" id="trashAnswer2" name="trashans" value="wrong"> No<br>
+                        <br>
+                        <button class="submit" onclick="return trashcheck();" type="submit" style="margin-left: 40%;">Submit</button>
+                    </div>
                 </div>
 
                 <script type="text/javascript" src="./room2/script_room2.js"></script>   
 
                 <!-- This is html css javascript for door-->
-                <div class="baseDoor zoom">
-                    <button role="button" id="lockimg"></button>
+                <div class="baseDoor" id="basedooradd">
+                    <button role="button" id="lockimg" class="zoom"></button>
 
                     <a class="button movenext zoom" href="./room3.html">Move to Next Room</a>
                     <div class="door">
@@ -73,15 +149,19 @@
                         <h3> Input the correct answer to unlock the door.</h3>
                         <table style="width:100%">
                         <tr>
-                            <td><input type="text" class="mytext" id="first" maxlength="1" style="height:40px; width:40px; text-align: center; font-size: 20px;">
-                            <input type="text" class="mytext" id="second" maxlength="1" style="height:40px; width:40px; text-align: center; font-size: 20px;">
-                            <input type="text" class="mytext" id="third" maxlength="1" style="height:40px; width:40px; text-align: center; font-size: 20px;">
-                            <input type="text" class="mytext" id="fourth" maxlength="1" style="height:40px; width:40px; text-align: center; font-size: 20px;"></td>
+                            <td>
+                                <input type="text" class="mytext" id="first" maxlength="1" style="height:40px; width:40px; text-align: center; font-size: 20px;">
+                                <input type="text" class="mytext" id="second" maxlength="1" style="height:40px; width:40px; text-align: center; font-size: 20px;">
+                                <input type="text" class="mytext" id="third" maxlength="1" style="height:40px; width:40px; text-align: center; font-size: 20px;">
+                                <input type="text" class="mytext" id="fourth" maxlength="1" style="height:40px; width:40px; text-align: center; font-size: 20px;">
+                                <input type="text" class="mytext" id="fifth" maxlength="1" style="height:40px; width:40px; text-align: center; font-size: 20px;">
+                                <input type="text" class="mytext" id="sixth" maxlength="1" style="height:40px; width:40px; text-align: center; font-size: 20px;">
+                            </td>
                         </tr>
                         </table>
                         <br><br>
                         <div>
-                            <button class="submit" onclick="return unlock();" type="submit">Submit</button>
+                            <button class="submit" onclick="return unlockroom2();" type="submit">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -89,8 +169,6 @@
                 <!-- End Here-->
             </div>
         </div>
-
-        
     
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
