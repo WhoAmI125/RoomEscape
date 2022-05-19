@@ -12,7 +12,7 @@
     width: 400px;
     height: 200px;
     bottom: 50px;
-    left: 900px;
+    left: 70%;
 }
 .table1{
     background-image: url("./table1.png");
@@ -20,7 +20,7 @@
     width: 200px;
     height: 200px;
     bottom: 70px;
-    left: 100px;
+    left: 7%;
 }
 .box{
     background-image: url("./box.png");
@@ -28,7 +28,7 @@
     width: 200px;
     height: 150px;
     bottom: 50px;
-    left: 1300px;
+    left: 30%;
     z-index: 1;
 }
 .flower{
@@ -37,7 +37,7 @@
     width: 220px;
     height: 220px;
     bottom: 240px;
-    left: 100px;
+    left: 7%;
 }
 .rug{
     background-image: url("./rug.png");
@@ -45,7 +45,7 @@
     width: 330px;
     height: 110px;
     bottom: 30px;
-    left: 30px;
+    left: 4%;
     z-index: 1;
 }
 .frame{
@@ -55,7 +55,7 @@
     height: 206px;
     bottom: 350px;
     z-index: 1;
-    left: 300px;
+    left: 10%;
 }
 .clock{
     background-image: url("./clock.png");
@@ -63,6 +63,6 @@
     width: 150px;
     height: 150px;
     bottom: 450px;
-    left: 1000px;
+    left: 60%;
 }
 
