@@ -17,12 +17,13 @@
 }
 
 .table{
+    position: fixed;
     background-image: url("./table.png");
     background-size: cover;
     width: 300px;
     height: 220px;
     bottom: 50px;
-    left: 980px;
+    right: 260px;
 }
 
 .book{
@@ -31,7 +32,7 @@
     width: 80px;
     height: 50px;
     bottom: 200px;
-    left: 1130px;
+    right: 320px;
 }
 
 .laptop{
@@ -40,7 +41,7 @@
     width: 100px;
     height: 98px;
     bottom: 210px;
-    left: 990px;
+    right: 450px;
 }
 
 .vault{
@@ -58,7 +59,7 @@
     width: 130px;
     height: 180px;
     bottom: 60px;
-    left: 1280px;
+    right: 50px;
 }
 
 .bookshelf{
@@ -101,18 +102,85 @@
     z-index: 10;
 }
   
-  /* Modal Content */
+
+/* Modal Content */
 .modal-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 1000px;
-    height: 650px !important;
+    height: 400px;
     text-align: center;
     font-size: 40px;
 }
-  
+
+.modal-content-mountain {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 1000px;
+    height: 450px !important;
+    text-align: center;
+    font-size: 40px;
+}
+
+.modal-content-book {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 1000px;
+    height: 450px !important;
+    text-align: center;
+    font-size: 20px;
+}
+
+.modal-content-vault {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 1000px;
+    height: 320px !important;
+    text-align: center;
+    font-size: 20px;
+}
+
+.modal-content-laptop {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 1000px;
+    height: 350px !important;
+    text-align: center;
+    font-size: 20px;
+}
+
+.modal-content-bag {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 1000px;
+    height: 350px !important;
+    text-align: center;
+    font-size: 20px;
+}
+
+.modal-content-trash {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 1000px;
+    height: 250px !important;
+    text-align: center;
+    font-size: 20px;
+}
+
 .close {
     color: #aaaaaa;
     text-align: right;
@@ -139,4 +207,29 @@
     cursor: pointer;
     border-radius: 16px;
     position:relative;
-  }
+}
+
+.btnla {
+    background-color: olive;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    position:relative;
+    width: 230px;
+    height: 80px;
+}
+
+  .rectangle1{
+    width: 400px;
+    height: 30px;
+    position:relative;
+    text-align: center;
+    bottom:10px;
+    background: #D291BC;
+}
