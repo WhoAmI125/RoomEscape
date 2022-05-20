@@ -12,6 +12,7 @@ var modalMonitor = document.getElementById("monitorModal");
 var modalCube = document.getElementById("cubeModal");
 var modalProjectorScreen = document.getElementById("projectorScreenModal");
 var modalJsLogo = document.getElementById("jsLogoModal");
+var modalHeart = document.getElementById("gameOverModal");
 
 var spanSpeechBubble = document.getElementsByClassName("close")[0];
 var spanMonitor = document.getElementsByClassName("close")[1];
@@ -75,6 +76,14 @@ window.onclick = function (event) {
 }
 
 
+// heart bar js파트 구현하기-틀리면 목숨 날아가고 3개 다 지워지면 게임 오버 modal window 띄움. 
+var lifeArray = new Array(3)
+
+function restart(){
+    location.reload();
+}
+
+
 
 function unlockRoom3() {
     if (document.getElementById('first').value == "s" && document.getElementById('second').value == "a" && document.getElementById('third').value == "l"
@@ -91,7 +100,7 @@ function unlockRoom3() {
 }
 
 
-function handleClick1() {
+function speechBubbleWorker() { //speechbubble 문제 구현 함수.
     var amountCorrect = 0;
     var totalCorrect = 0;
 
@@ -125,8 +134,20 @@ function handleClick1() {
     }
     else {
         alert("모든 문제를 맞춰야 자물쇠 첫번재 글자 힌트를 얻을 수 있습니다."); // 그렇지 않으면 이상한 힌트를 제공.
-        document.getElementById("btnSpeechBubble").textContent = "첫번째 과제도 못한다니.. 실망이야!";
+        alert("틀리셨으니 하트 한 개 차감합니다. 남은 하트:"+lifeArray.length+"개. \n 하트 3개가 모두 차감되면 게임 오버");
+        const element = document.getElementById("heart" + lifeArray.length);
+        element.remove();
+        lifeArray.pop();
+        if (lifeArray.length==0) {
+            
+            modalHeart.style.display = "block";
+            modalSpeechBubble.style.display="none";
+            
+        }else{
+            document.getElementById("btnSpeechBubble").textContent = "첫번째 과제도 못한다니.. 실망이야!";
+        }
         totalCorrect = 0;
+       
     }
 }
 
@@ -183,19 +204,14 @@ function FillInTheBlank() {
     if (document.getElementById('blank6').value == 'value' || document.getElementById('blank6').value == 'type') {
         numberCorrect++;
     }
-    if (document.getElementById('blank7').value == 'filter') {
+
+    if (document.getElementById('blank7').value == 'key' || document.getElementById('blank7').value == 'value') {
         numberCorrect++;
     }
-    if (document.getElementById('blank8').value == 'true' || document.getElementById('blank8').value == 'True') {
+    if (document.getElementById('blank8').value == 'key' || document.getElementById('blank8').value == 'value') {
         numberCorrect++;
     }
-    if (document.getElementById('blank9').value == 'key' || document.getElementById('blank9').value == 'value') {
-        numberCorrect++;
-    }
-    if (document.getElementById('blank10').value == 'key' || document.getElementById('blank10').value == 'value') {
-        numberCorrect++;
-    }
-    if (document.getElementById('blank11').value == 'package.json') {
+    if (document.getElementById('blank9').value == 'package.json') {
         numberCorrect++;
     }
 
@@ -207,22 +223,25 @@ function FillInTheBlank() {
     }
     else {
         let numberWrong = totalCorrect - numberCorrect;
-        alert("현재 틀린 개수는 " + numberWrong + "입니다. 분발하세요");
-        document.getElementById("btnSpeechBubble").textContent = "넌 못 지나간다!";
+        alert("현재 틀린 개수는 " + numberWrong + "입니다. 분발하세요. \n 틀리셨으니 하트 한 개 차감합니다. 남은 하트:"+lifeArray.length+"개. \n 하트 3개가 모두 차감되면 게임 오버");
 
+        const element = document.getElementById("heart" + lifeArray.length);
+        element.remove();
+        lifeArray.pop();
+        if (lifeArray.length==0) {
+            
+            modalHeart.style.display = "block";
+            modalCube.style.display="none";
+            
+        }else{
+            document.getElementById("btnSpeechBubble").textContent = "넌 못 지나간다!";
+        }
+        totalCorrect = 0;
     }
 
-
-    var nums = [10, 50, 88];
-
-    nums.filter(function (n) {
-        return n > 10;
-    });
-
-    console.log(nums);
 }
 
-function handleClick5() {
+function jsLogoWorker() {
     var amountCorrect = 0;
 
     var radios = document.getElementsByName('lastproblem1');
@@ -248,4 +267,56 @@ function handleClick5() {
     }
 
 }
+
+
+
+function mcqCheck(){
+    var amountCorrect = 0;
+    var totalCorrect = 4;
+
+    for (var i = 1; i <= 5; i++) {
+        // i 는 radiobutton에 부여한 name 'group'+'i'.
+        // i의 조건 범위는 문항 개수와 group'i' 따라 달라짐.
+        var radios = document.getElementsByName('nodegroup' + i);
+        // button에 부여한 name group1, group2... 에 따라 radiobutton 불러옴.
+
+        for (var j = 0; j < radios.length; j++) {
+            var radio = radios[j];
+            if (radio.value == "correct") {
+                // radio button에 부여한 value가 correct 정답이면 총 정답 수 증가.
+
+                totalCorrect++;
+                if (radio.checked) {
+                    // value가 correct인 radiobutton을 선택했으면 정답 문제 수도 추가.
+                    amountCorrect++;
+                }
+            }
+        }
+    }
+
+
+    if (amountCorrect == totalCorrect) {
+        alert("정답입니다. 네번째 글자는 a였습니다.!");
+        document.getElementById("btnSpeechBubble").textContent = "마지막으로 액자를 조사해봐! 화이팅이다 ";
+        modalProjectorScreen.style.display = "none";
+    }
+    else {
+        alert("모든 문제를 맞춰야 자물쇠 첫번재 글자 힌트를 얻을 수 있습니다.\n 틀리셨으니 하트 한 개 차감합니다. 남은 하트:"+lifeArray.length+"개. \n 하트 3개가 모두 차감되면 게임 오버");
+        const element = document.getElementById("heart" + lifeArray.length);
+        element.remove();
+        lifeArray.pop();
+        if (lifeArray.length==0) {
+            
+            modalHeart.style.display = "block";
+            modalProjectorScreen.style.display="none";
+        }else{
+            document.getElementById("btnSpeechBubble").textContent = "좀만 더 잘해봐...!!";
+        }
+        totalCorrect = 0;
+
+    }
+
+}
+
+
 
