@@ -1,3 +1,6 @@
+var lifeArray = new Array(3)
+loadHeart();
+
 // Get the modal by modal id
 var modalMountain = document.getElementById("mountainModal");
 var modalBook = document.getElementById("bookModal");
@@ -22,6 +25,7 @@ var spanVault = document.getElementsByClassName("close")[3];
 var spanLaptop = document.getElementsByClassName("close")[4];
 var spanBag = document.getElementsByClassName("close")[5];
 var spanTrash = document.getElementsByClassName("close")[6];
+
 
 // 버튼을 누를 때 modal 윈도우가 열림
 btnMountain.onclick = function () {
@@ -112,7 +116,7 @@ window.onclick = function (event) {
     }
 } 
 
-// 딱 한번의 기회만 주어지는 클릭 함수.
+// Removed the one chance
 function reply_click(clicked_id) {
     var answer="mountain1";
     var choice=clicked_id
@@ -121,7 +125,7 @@ function reply_click(clicked_id) {
     }
     else{ // 틀리면 페이지가 새로고침되어 다시 시작
         alert("Wrong Answer");
-        document.location.reload();
+        removeHeart();
     }
 }
 
@@ -133,7 +137,7 @@ function reply_clickva(clicked_id) {
     }
     else{ // 틀리면 페이지가 새로고침되어 다시 시작
         alert("Wrong Answer");
-        document.location.reload();
+        removeHeart();
     }
 }
 
@@ -145,7 +149,7 @@ function reply_clickla(clicked_id) {
     }
     else{ // 틀리면 페이지가 새로고침되어 다시 시작
         alert("Wrong Answer");
-        document.location.reload();
+        removeHeart();
     }
 }
 
@@ -180,6 +184,7 @@ function handleClick() {
     else{
         alert("One or more is wrong"); // 그렇지 않으면 이상한 힌트를 제공. 
         totalCorrect=0;
+        removeHeart();
     }
 }
 
@@ -195,7 +200,9 @@ function checktextbag() {
     }
     else
     { 
+        removeHeart();
         alert("Wrong Answer, hint: problem with index");
+        inputtext = " ";
     }
 }
 
@@ -207,7 +214,7 @@ function trashcheck() {
     }
     else{
         alert("Wrong answer");
-        document.location.reload();
+        removeHeart();
     }
 }
 
@@ -224,5 +231,45 @@ function unlockroom2()
   else
   {
     alert("Wrong Answer");
+    removeHeart();
   }
+}
+
+function removeHeart()
+{
+    const element = document.getElementById("heart" + lifeArray.length);
+    element.remove();
+    lifeArray.pop();
+    if (lifeArray.length == 0)
+    {
+            
+        lifeArray = new Array(3)
+        document.location.reload();
+    }
+    saveHeart();
+}
+
+function saveHeart()
+{
+    sessionStorage.setItem("lifeArray", JSON.stringify(lifeArray.length));
+}
+
+function loadHeart()
+{
+    let lastTasks = sessionStorage.getItem("lifeArray");
+    if (!lastTasks) return;
+
+    if(lastTasks === "2")
+    {
+        lifeArray.pop();
+        const element = document.getElementById("heart" + 3);
+        element.remove();
+    }
+    else if(lastTasks === "1")
+    {
+        document.getElementById("heart" + 3).remove();
+        document.getElementById("heart" + 2).remove();
+        lifeArray.pop();
+        lifeArray.pop();
+    }
 }
