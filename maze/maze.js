@@ -72,12 +72,12 @@ function load_maze(){
         tmp+=('<div class="row" id="row'+i+'">');
         for(let j=0; j<max; j++){
             if(isWall(i,j)) {
-                tmp+=('<div class="col wall" id="ele'+i+'-'+j+'"></div>');
+                tmp+=('<div class="col wall" id="ele'+i+'-'+j+'"><span id="s'+i+'-'+j+'"></span></div>');
 //                tmparr.push(1);
             }
             else {
 //                tmparr.push(0);
-                tmp+=('<div class="col path" id="ele'+i+'-'+j+'"></div>');
+                tmp+=('<div class="col path" id="ele'+i+'-'+j+'"><span id="s'+i+'-'+j+'"></span></div>');
             }
         }
         tmp+=('</div>');
@@ -85,7 +85,7 @@ function load_maze(){
     }
 //    maze[max-1][max-1]=100;
     document.getElementById('maze_main').innerHTML=tmp;
-    document.getElementById('ele'+pos.y+'-'+pos.x).classList.add("cur");
+    document.getElementById('s'+pos.y+'-'+pos.x).classList.add("cur");
 }
 function set_border(){
     for(let y=0; y<max; y++){
@@ -134,27 +134,27 @@ function checkBound(y,x){
 
 function move_r(){
     if(!checkBound(pos.y,pos.x+1)) return;
-    document.getElementById('ele'+pos.y+'-'+pos.x).classList.remove("cur");
+    document.getElementById('s'+pos.y+'-'+pos.x).classList.remove("cur");
     pos.x+=1;
-    document.getElementById('ele'+pos.y+'-'+pos.x).classList.add("cur");
+    document.getElementById('s'+pos.y+'-'+pos.x).classList.add("cur");
 }
 function move_l(){
     if(!checkBound(pos.y,pos.x-1)) return;
-    document.getElementById('ele'+pos.y+'-'+pos.x).classList.remove("cur");
+    document.getElementById('s'+pos.y+'-'+pos.x).classList.remove("cur");
     pos.x-=1;
-    document.getElementById('ele'+pos.y+'-'+pos.x).classList.add("cur");
+    document.getElementById('s'+pos.y+'-'+pos.x).classList.add("cur");
 }
 function move_d(){
     if(!checkBound(pos.y+1,pos.x)) return;
-    document.getElementById('ele'+pos.y+'-'+pos.x).classList.remove("cur")
+    document.getElementById('s'+pos.y+'-'+pos.x).classList.remove("cur")
     pos.y+=1;
-    document.getElementById('ele'+pos.y+'-'+pos.x).classList.add("cur")
+    document.getElementById('s'+pos.y+'-'+pos.x).classList.add("cur")
 }
 function move_u(){
     if(!checkBound(pos.y-1,pos.x)) return;
-    document.getElementById('ele'+pos.y+'-'+pos.x).classList.remove("cur")
+    document.getElementById('s'+pos.y+'-'+pos.x).classList.remove("cur")
     pos.y-=1;
-    document.getElementById('ele'+pos.y+'-'+pos.x).classList.add("cur")
+    document.getElementById('s'+pos.y+'-'+pos.x).classList.add("cur")
 }
 function check_goal(){
     if(maze[pos.y][pos.x]===3){
