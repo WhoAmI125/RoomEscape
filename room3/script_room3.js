@@ -91,8 +91,8 @@ function unlockRoom3() {
         element.addEventListener("click", toggleDoor);
         document.getElementById('lockimg').parentNode.removeChild(lockimg);
         alert("Door Unlocked");
+        document.getElementById("basedooradd").classList.add("zoom");
         answerModal.style.display = "none";
-
     }
     else {
         alert("Wrong Answer");
