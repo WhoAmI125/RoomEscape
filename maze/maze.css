@@ -53,6 +53,8 @@
 .cur{
     border-radius: 50%;
     background-color: yellow;
+/*    background-image: url("./me.png");
+    background-size: cover;*/
 }
 #roof1{
     position: absolute;
@@ -61,29 +63,30 @@
     height: 110px;
     transform: skewY(-15deg);
     background-color: darkred;
+/*
     z-index: 5;
     border-style: solid;
     border-color: rgb(107, 0, 0);
     border-left-style: none;
+    */
 }
 #roof2{
     position: absolute;
     width: 60px;
     height: 110px;
     transform: skewY(15deg);
-    background-color: darkred;
+    background-color: rgb(79, 7, 7);
+/*
     border-style: solid;
     border-color: rgb(107, 0, 0);
     border-right-color: rgb(107, 0, 0);
-    z-index: 5;
+    z-index: 5;*/
 }
 #house{
-    border-top-style: solid;
-    border-color:rgb(80, 79, 79);
     position:relative;
     height: 100px;
     width: 120px;
-    background-color:bisque;
+    background-color:rgb(217, 195, 169);
 }
 .control{
     position: absolute;
@@ -91,6 +94,30 @@
 }
 .wall{
     background-color: rgb(57, 70, 34);
+}
+.wall_border_left{
+    border-left-color: rgb(34, 40, 23) !important;
+}
+.wall_border_right{
+    border-right-color: rgb(140, 161, 102) !important;
+}
+.wall_border_up{
+    border-top-color: rgb(100, 111, 79) !important;
+}
+.wall_border_down{
+    border-bottom-color: rgb(34, 40, 23) !important;
+}
+.empty_border_left{
+    border-left-color:  rgb(54, 66, 33) !important;
+}
+.empty_border_right{
+    border-right-color: rgb(59, 72, 35) !important;
+}
+.empty_border_down{
+    border-bottom-color: rgb(61, 74, 37) !important;
+}
+.empty_border_up{
+    border-top-color: rgb(63, 78, 38) !important;
 }
 #player{
     display: inline-block;
@@ -105,6 +132,9 @@
 .col{
     display: inline-block;
     height: 30px;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 5px;
 }
 .row{
     display: block;

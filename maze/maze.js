@@ -87,9 +87,41 @@ function load_maze(){
     document.getElementById('maze_main').innerHTML=tmp;
     document.getElementById('ele'+pos.y+'-'+pos.x).classList.add("cur");
 }
+function set_border(){
+    for(let y=0; y<max; y++){
+        for(let x=0; x<max; x++){
+            if(maze[y][x]===1){
+                if(y===max-1 || (y<max-1 && maze[y+1][x]!==1)){
+                    document.getElementById('ele'+y+'-'+x).classList.add("wall_border_down");
+                } else{
+                    document.getElementById('ele'+y+'-'+x).classList.add("empty_border_down");
+                }
+                if(y===0 || (y>0 && maze[y-1][x]!==1)){
+                    document.getElementById('ele'+y+'-'+x).classList.add("wall_border_up");
+                }else{
+                    document.getElementById('ele'+y+'-'+x).classList.add("empty_border_up");
+                }
+
+                if(x===max-1 || (x<max-1 && maze[y][x+1]!==1)){
+                    document.getElementById('ele'+y+'-'+x).classList.add("wall_border_right");
+                }else{
+                    document.getElementById('ele'+y+'-'+x).classList.add("empty_border_right");
+                }
+
+                if(x===0 || (x>0 && maze[y][x-1]!==1)){
+                    document.getElementById('ele'+y+'-'+x).classList.add("wall_border_left");
+                }else{
+                    document.getElementById('ele'+y+'-'+x).classList.add("empty_border_left");
+                }
+
+            }
+        }
+    }
+}
 
 make_maze();
 load_maze();
+set_border();
 
 function checkBound(y,x){
     if(y>=max || x>=max || y<0 || x<0 || maze[y][x]==1){
