@@ -1,16 +1,15 @@
-document.onkeydown = (e) => {  
-    e = e || window.event;  
-    if (e.keyCode === 38) {  
+document.onkeydown = function() {  
+    if (event.keyCode === 38) {  
       move_u();
-    } else if (e.keyCode === 40) {  
+    } else if (event.keyCode === 40) {  
       move_d();
-    } else if (e.keyCode === 37) {  
+    } else if (event.keyCode === 37) {  
       move_l();  
-    } else if (e.keyCode === 39) {  
+    } else if (event.keyCode === 39) {  
       move_r();
     }
     check_goal();
-  }
+  };
 let maze=[];
 let maze_main=document.getElementById("maze_main");
 let pos={
