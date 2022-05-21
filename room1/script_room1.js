@@ -108,10 +108,9 @@ function reply_click(clicked_id) {
     if (question2Ans==choice){ // 정답이면 방탈출 힌트 제공.
         alert(question2Hint[question2HintIdx]);
     }
-    else{ // 틀리면 페이지가 새로고침되어 다시 시작
+    else{
         alert("Try again...");
         // life -;
-        document.location.reload();
     }
 }
 function handleClick() {
