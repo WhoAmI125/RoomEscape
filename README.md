@@ -47,9 +47,32 @@ There is a main room, and several rooms which can be accessed by solving problem
 *Notes*
 - each room is made by absolute postion, without considering relative
 - READ.ME is created to follow up the patch notes
-- Discussion 5.14: fixed or relative screen size
-- Decided to use fixed pixel screen size
 - To check branch of remote, create own local branch, pull the remote branch to check the update
+<br/><br/>
+
+**Room Escape version 1.0 ~Sun (5.22)**
+
+- Final Development
+- Testing & Fixing errors
+
+**Room Escape version 0.3 ~Sat (5.21)**
+
+
+<strong> HyunJoon Park : </strong>
+
+- Making Heart UI (Life system)
+<br/><br/>
+
+
+<strong> Hajong Kim :</strong>
+
+- Making easter eggs
+<br/><br/>
+
+
+<strong> Yumin Heo : </strong>
+- Making maze game in ending page
+
 <br/><br/>
 
 **Room Escape version 0.2 ~Thurs (5.19)**
