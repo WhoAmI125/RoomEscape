@@ -134,6 +134,7 @@ function checkBound(y,x){
 
 function move_r(){
     if(!checkBound(pos.y,pos.x+1)) return;
+//    document.getElementById('s'+pos.y+'-'+pos.x).classList.add("cm_right");
     document.getElementById('s'+pos.y+'-'+pos.x).classList.remove("cur");
     pos.x+=1;
     document.getElementById('s'+pos.y+'-'+pos.x).classList.add("cur");
