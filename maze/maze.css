@@ -1,0 +1,112 @@
+
+#popup_bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 1;
+}
+.ending_window {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#ending_text{
+    display: none;
+    position: absolute;
+    background-color: rgba(255,255,255,1);
+    width:70%;
+    height:25%;
+    bottom: 2%;
+    left: 15%;
+    border-radius: 10%;
+    z-index: 1000;
+}
+#ending_txtContents{
+    color: black;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+}
+.control{
+    position:absolute;
+    bottom:0;
+}
+.mov{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+}
+.c_maze{
+    min-width: 800px;
+    position: absolute;
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 50px;
+    background-color: olive;
+}
+.cur{
+    border-radius: 50%;
+    background-color: yellow;
+}
+#roof1{
+    position: absolute;
+    left: 60px;
+    width: 60px;
+    height: 110px;
+    transform: skewY(-15deg);
+    background-color: darkred;
+    z-index: 5;
+    border-style: solid;
+    border-color: rgb(107, 0, 0);
+    border-left-style: none;
+}
+#roof2{
+    position: absolute;
+    width: 60px;
+    height: 110px;
+    transform: skewY(15deg);
+    background-color: darkred;
+    border-style: solid;
+    border-color: rgb(107, 0, 0);
+    border-right-color: rgb(107, 0, 0);
+    z-index: 5;
+}
+#house{
+    border-top-style: solid;
+    border-color:rgb(80, 79, 79);
+    position:relative;
+    height: 100px;
+    width: 120px;
+    background-color:bisque;
+}
+.control{
+    position: absolute;
+    left: 40%;
+}
+.wall{
+    background-color: rgb(57, 70, 34);
+}
+#player{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+}
+.blue{
+    background-color: blue;
+}
+.col{
+    display: inline-block;
+    height: 30px;
+}
+.row{
+    display: block;
+    text-align: center;
+}
