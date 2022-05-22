@@ -11,7 +11,15 @@ window.onload=starting();
 
 function starting(){
 //
+    set_screensize();
     eye_opening();
+}
+function set_screensize(){
+    let w=window.innerWidth;
+    let h=window.innerHeight;
+    console.log(w,h);
+    if(w>1200) document.getElementsByClassName("baseRoom")[0].style.minWidth=w+'px';
+    if(h>500) document.getElementsByClassName("baseRoom")[0].style.minHeight=h+'px';
 }
 function sleep(time) {
     if(time<=0) return;

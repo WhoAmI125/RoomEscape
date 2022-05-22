@@ -8,6 +8,8 @@
     margin: 0;
     position: absolute;
     z-index: -100;
+    min-width: 1200px;
+    min-height: 500px;
 }
 .obj{
     position: absolute;
