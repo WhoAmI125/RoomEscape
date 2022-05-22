@@ -31,8 +31,12 @@ There is a main room, and several rooms which can be accessed by solving problem
 
 1.  The index.html will be the main room that will start. There would be pop-up explain about the stoy
 2.  In the room, there will be objects that can be clicked and solve the questions to receive the hint.
-3.  The hints received by solving the questions will be used to unlock the door and leave to the next room.
-4.  The final room is solving the maze to escape the room
+     - If image can be clicked, there would be zoom animation, if there is not animation that object is not able to click
+     - Need to click on the object, solve the question by clicking button or writing down
+4.  The hints received by solving the questions will be used to unlock the door and leave to the next room.
+     - Click on the door lock image to unlock the door
+6.  The final room is solving the maze to escape the room
+     - The arrow buttons are used to move the character around
 
 **Task assignment:**
 
@@ -53,6 +57,12 @@ There is a main room, and several rooms which can be accessed by solving problem
 
 *Notes* - each room is made by absolute postion, without considering relative - [READ.ME](http://READ.ME) is created to follow up the patch notes - To check branch of remote, create own local branch, pull the remote branch to check the update
 
+**Room Escape version 1.0.1 ~Sun (5.22)**
+
+- Fixed bugs made in room3
+
+</br>
+
 **Room Escape version 1.0 ~Sun (5.22)**
 
 -   Final Development
@@ -63,17 +73,19 @@ There is a main room, and several rooms which can be accessed by solving problem
 
 **Room Escape version 0.3 ~Sat (5.21)**
 
-**HyunJoon Park :**
+HyunJoon Park :
 
 -   Making Heart UI (Life system)
 
-**Hajong Kim :**
+Hajong Kim :
 
 -   Making cookie modal
+-   Created heart storage information
 
-**Yumin Heo :**
+Yumin Heo :
 
 -   Making maze game in end page
+-   Fixed ratio issue of the room objects
 
 </br>
 
@@ -81,32 +93,32 @@ There is a main room, and several rooms which can be accessed by solving problem
 
 -   Everyone decorates own room with questions
 
-**HyunJoon Park :**
+HyunJoon Park :
 
 -   question answer determine if it is correct or not
 
-**Hajong Kim :**
+Hajong Kim :
 
 -   Create Lock for the door
 
-**Yumin Heo :** 
+Yumin Heo :
 - Intro webpage : Pop-up about story of kidnap when index.html is firsted loaded
 
 </br>
 
 **Room Escape version 0.1: ~Sat (5.14)**
 
-**Yumin Heo :**
+Yumin Heo :
 
 -   basic html door placement setting and room setting (all with absolute position)
 -   questions about git
 
-**Hajong Kim :**
+Hajong Kim :
 
 -   animation opening the door and zoom-in animation when curser is on the object (took check if that object is able to click)
 -   questions about html and css
 
-**HyunJoon Park :**
+HyunJoon Park :
 
 -   pop up menu + question UI
 -   questions about javascript, NPM
@@ -114,6 +126,8 @@ There is a main room, and several rooms which can be accessed by solving problem
 </br></br>
 
 **If You Want to Participate in Developing Room Escape**
+
+Download the most up-to-date release version in our github repository or fork to work on it.
 
 If you want new room and study
 - create room#.html in main directory, and create room# file and put the related source inside!
