@@ -110,3 +110,11 @@ There is a main room, and several rooms which can be accessed by solving problem
 
 -   pop up menu + question UI
 -   questions about javascript, NPM
+
+
+**If You Want to Participate in Developing Room Escape**
+
+- Each room folder contains all the sources needed for room#.html
+- Edit the files inside the folder and apply to the room#.html in the main directory
+
+*For more information, see the contact and connect to one of us*
