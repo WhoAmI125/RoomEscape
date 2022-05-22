@@ -16,6 +16,9 @@ let question3Ans="";
 let question3Hint=["Answer, hint: l","Answer, hint: o"];
 let question3HintIdx=0;
 
+let lifeArray=new Array(3);
+saveHeart();
+
 mod1.forEach( (m) => {
     m.addEventListener("click", function () {
         modal1.style.display = "block";
@@ -156,4 +159,23 @@ function unlock_room1()
   {
     alert("Wrong Answer");
   }
+}
+
+function removeHeart()
+{
+    const element = document.getElementById("heart" + lifeArray.length);
+    element.remove();
+    lifeArray.pop();
+    if (lifeArray.length == 0)
+    {
+            
+        lifeArray = new Array(3)
+        document.location.reload();
+    }
+    saveHeart();
+}
+
+function saveHeart()
+{
+    sessionStorage.setItem("lifeArray", JSON.stringify(lifeArray.length));
 }
