@@ -111,9 +111,14 @@ There is a main room, and several rooms which can be accessed by solving problem
 -   pop up menu + question UI
 -   questions about javascript, NPM
 
+</br></br>
 
 **If You Want to Participate in Developing Room Escape**
 
+If you want new room and study
+- create room#.html in main directory, and create room# file and put the related source inside!
+
+If you want to Edit
 - Each room folder contains all the sources needed for room#.html
 - Edit the files inside the folder and apply to the room#.html in the main directory
 
