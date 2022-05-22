@@ -16,6 +16,9 @@ let question3Ans="";
 let question3Hint=["Answer, hint: l","Answer, hint: o"];
 let question3HintIdx=0;
 
+let lifeArray=new Array(3);
+saveHeart();
+
 mod1.forEach( (m) => {
     m.addEventListener("click", function () {
         modal1.style.display = "block";
@@ -101,6 +104,7 @@ function digitCheck(){
      else{
         alert("Try again...");
         //life -;
+        removeHeart();
      }
 }
 function reply_click(clicked_id) {
@@ -110,6 +114,7 @@ function reply_click(clicked_id) {
     }
     else{
         alert("Try again...");
+        removeHeart();
         // life -;
     }
 }
@@ -140,6 +145,7 @@ function handleClick() {
     else{
         alert("Try again..."); // 그렇지 않으면 이상한 힌트를 제공. 
         totalCorrect=0;
+        removeHeart();
     }
 }
 function unlock_room1()
@@ -156,4 +162,24 @@ function unlock_room1()
   {
     alert("Wrong Answer");
   }
+}
+
+
+function removeHeart()
+{
+    const element = document.getElementById("heart" + lifeArray.length);
+    element.remove();
+    lifeArray.pop();
+    if (lifeArray.length == 0)
+    {
+            
+        lifeArray = new Array(3)
+        document.location.reload();
+    }
+    saveHeart();
+}
+
+function saveHeart()
+{
+    sessionStorage.setItem("lifeArray", JSON.stringify(lifeArray.length));
 }

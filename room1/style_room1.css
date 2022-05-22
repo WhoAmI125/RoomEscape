@@ -154,3 +154,26 @@
     bottom: 450px;
     left: 60%;
 }
+#heart1{
+    position:absolute;
+    right: 250px;
+    top: 40px;
+    width: 60px;
+    height: 60px;
+}
+
+#heart2{
+    position:absolute;
+    right: 180px;
+    top: 40px;
+    width: 60px;
+    height: 60px;
+}
+
+#heart3{
+    position:absolute;
+    right: 110px;
+    top: 40px;
+    width: 60px;
+    height: 60px;
+}
