@@ -1,7 +1,7 @@
 body{
     width: 100%;
     height: 100%;
-    background-color: olive !important;
+    background-color: #DFCFBE !important;
 }
 #popup_bg {
     display: none;
@@ -61,7 +61,7 @@ body{
     padding-left: 20%;
     padding-right: 20%;
     padding-bottom: 50px;
-    background-color: olive;
+    background-color: #DFCFBE;
 }
 .cur{
     display: inline-block;

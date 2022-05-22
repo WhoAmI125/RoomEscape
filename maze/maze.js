@@ -163,5 +163,11 @@ function check_goal(){
 }
 function done(){
     document.getElementById("popup_bg").style.display='block';
-    document.getElementById("ending_text").style.display='block';   
+    document.getElementById("ending_text").style.display='block';
+    cookiemodal();   
+}
+
+function cookiemodal()
+{
+    document.getElementById("cookieModal").style.display='block'
 }
