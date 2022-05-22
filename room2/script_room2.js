@@ -1,3 +1,4 @@
+//Set the heart array
 var lifeArray = new Array(3)
 loadHeart();
 
