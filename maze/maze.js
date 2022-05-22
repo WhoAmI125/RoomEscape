@@ -17,21 +17,6 @@ let pos={
     x: 1
 };
 let max;
-let pl=document.getElementById("player");
-/*
-document.getElementById("up").addEventListener("click",function(){
-    move_u();
-});
-document.getElementById("down").addEventListener("click",function(){
-    move_d();
-});
-document.getElementById("left").addEventListener("click",function(){
-    move_l();
-});
-document.getElementById("right").addEventListener("click",function(){
-    move_r();
-});
-*/
 function isWall(y,x){
     if(maze[y][x]===1) return true;
     return false;

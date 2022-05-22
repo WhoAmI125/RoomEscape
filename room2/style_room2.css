@@ -17,7 +17,7 @@
 }
 
 .table{
-    position: fixed;
+    position: absolute; /* fixed-> absolute*/
     background-image: url("./table.png");
     background-size: cover;
     width: 300px;

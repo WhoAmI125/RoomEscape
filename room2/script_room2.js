@@ -1,3 +1,12 @@
+/* onload function*/
+window.onload=function(){
+    let w=window.innerWidth;
+    let h=window.innerHeight;
+//    console.log(w,h);
+    if(w>1200) document.getElementsByClassName("baseRoom")[0].style.minWidth=w+'px';
+    if(h>500) document.getElementsByClassName("baseRoom")[0].style.minHeight=h+'px';
+};
+
 var lifeArray = new Array(3)
 loadHeart();
 

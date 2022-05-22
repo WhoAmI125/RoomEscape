@@ -17,7 +17,7 @@ function starting(){
 function set_screensize(){
     let w=window.innerWidth;
     let h=window.innerHeight;
-    console.log(w,h);
+//    console.log(w,h);
     if(w>1200) document.getElementsByClassName("baseRoom")[0].style.minWidth=w+'px';
     if(h>500) document.getElementsByClassName("baseRoom")[0].style.minHeight=h+'px';
 }

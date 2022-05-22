@@ -1,3 +1,12 @@
+/* onload function*/
+window.onload=function(){
+    let w=window.innerWidth;
+    let h=window.innerHeight;
+//    console.log(w,h);
+    if(w>1200) document.getElementsByClassName("baseRoom")[0].style.minWidth=w+'px';
+    if(h>500) document.getElementsByClassName("baseRoom")[0].style.minHeight=h+'px';
+};
+
 // Get the button that opens the modal by button id
 var btnSpeechBubble = document.getElementById("btnSpeechBubble");
 var btnMonitor = document.getElementById("btnMonitor");
