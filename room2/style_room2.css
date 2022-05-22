@@ -237,7 +237,7 @@
 #heart1{
     position:absolute;
     /*left:550px;*/
-    right: 250px;
+    right: 390px;
     top: 40px;
     width: 60px;
     height: 60px;
@@ -246,13 +246,31 @@
 #heart2{
     position:absolute;
     /*left:600px;*/
-    right: 180px;
+    right: 320px;
     top: 40px;
     width: 60px;
     height: 60px;
 }
 
 #heart3{
+    position:absolute;
+    /*left:650px;*/
+    right: 250px;
+    top: 40px;
+    width: 60px;
+    height: 60px;
+}
+
+#heart4{
+    position:absolute;
+    /*left:650px;*/
+    right: 180px;
+    top: 40px;
+    width: 60px;
+    height: 60px;
+}
+
+#heart5{
     position:absolute;
     /*left:650px;*/
     right: 110px;
