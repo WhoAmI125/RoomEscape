@@ -1,3 +1,7 @@
+//Set the heart array
+var lifeArray = new Array(3)
+loadHeart();
+
 // Get the button that opens the modal by button id
 var btnSpeechBubble = document.getElementById("btnSpeechBubble");
 var btnMonitor = document.getElementById("btnMonitor");
@@ -133,19 +137,10 @@ function speechBubbleWorker() { //speechbubble 문제 구현 함수.
 
     }
     else {
+        removeHeart();
         alert("모든 문제를 맞춰야 자물쇠 첫번재 글자 힌트를 얻을 수 있습니다."); // 그렇지 않으면 이상한 힌트를 제공.
         alert("틀리셨으니 하트 한 개 차감합니다. 남은 하트:"+lifeArray.length+"개. \n 하트 3개가 모두 차감되면 게임 오버");
-        const element = document.getElementById("heart" + lifeArray.length);
-        element.remove();
-        lifeArray.pop();
-        if (lifeArray.length==0) {
-            
-            modalHeart.style.display = "block";
-            modalSpeechBubble.style.display="none";
-            
-        }else{
-            document.getElementById("btnSpeechBubble").textContent = "첫번째 과제도 못한다니.. 실망이야!";
-        }
+        document.getElementById("btnSpeechBubble").textContent = "첫번째 과제도 못한다니.. 실망이야!";
         totalCorrect = 0;
        
     }
@@ -162,6 +157,7 @@ function reply_click(clicked_id) {
 
     }
     else { // 틀리면 페이지가 새로고침되어 다시 시작
+        removeHeart();
         alert("오답, 빵야!");
         document.location.reload();
     }
@@ -173,6 +169,7 @@ function digitCheck() {
         alert("정답, 힌트 제공");
     }
     else {
+        removeHeart();
         alert("오답");
     }
 
@@ -222,20 +219,10 @@ function FillInTheBlank() {
         modalCube.style.display = "none";
     }
     else {
+        removeHeart();
         let numberWrong = totalCorrect - numberCorrect;
         alert("현재 틀린 개수는 " + numberWrong + "입니다. 분발하세요. \n 틀리셨으니 하트 한 개 차감합니다. 남은 하트:"+lifeArray.length+"개. \n 하트 3개가 모두 차감되면 게임 오버");
-
-        const element = document.getElementById("heart" + lifeArray.length);
-        element.remove();
-        lifeArray.pop();
-        if (lifeArray.length==0) {
-            
-            modalHeart.style.display = "block";
-            modalCube.style.display="none";
-            
-        }else{
-            document.getElementById("btnSpeechBubble").textContent = "넌 못 지나간다!";
-        }
+        document.getElementById("btnSpeechBubble").textContent = "넌 못 지나간다!";
         totalCorrect = 0;
     }
 
@@ -262,6 +249,7 @@ function jsLogoWorker() {
         modalJsLogo.style.display = "none";
     }
     else {
+        removeHeart();
         alert("땡! 처음부터 다시하세요");
         document.location.reload();
     }
@@ -301,22 +289,50 @@ function mcqCheck(){
         modalProjectorScreen.style.display = "none";
     }
     else {
+        removeHeart();
         alert("모든 문제를 맞춰야 자물쇠 첫번재 글자 힌트를 얻을 수 있습니다.\n 틀리셨으니 하트 한 개 차감합니다. 남은 하트:"+lifeArray.length+"개. \n 하트 3개가 모두 차감되면 게임 오버");
-        const element = document.getElementById("heart" + lifeArray.length);
-        element.remove();
-        lifeArray.pop();
-        if (lifeArray.length==0) {
-            
-            modalHeart.style.display = "block";
-            modalProjectorScreen.style.display="none";
-        }else{
-            document.getElementById("btnSpeechBubble").textContent = "좀만 더 잘해봐...!!";
-        }
+        document.getElementById("btnSpeechBubble").textContent = "좀만 더 잘해봐...!!";
         totalCorrect = 0;
 
     }
 
 }
 
+function removeHeart()
+{
+    const element = document.getElementById("heart" + lifeArray.length);
+    element.remove();
+    lifeArray.pop();
+    if (lifeArray.length == 0)
+    {
+            
+        lifeArray = new Array(3)
+        document.location.reload();
+    }
+    saveHeart();
+}
 
+function saveHeart()
+{
+    sessionStorage.setItem("lifeArray", JSON.stringify(lifeArray.length));
+}
 
+function loadHeart()
+{
+    let lastTasks = sessionStorage.getItem("lifeArray");
+    if (!lastTasks) return;
+
+    if(lastTasks === "2")
+    {
+        lifeArray.pop();
+        const element = document.getElementById("heart" + 3);
+        element.remove();
+    }
+    else if(lastTasks === "1")
+    {
+        document.getElementById("heart" + 3).remove();
+        document.getElementById("heart" + 2).remove();
+        lifeArray.pop();
+        lifeArray.pop();
+    }
+}

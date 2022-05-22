@@ -1,3 +1,4 @@
+//Set the heart array
 let mod1 = document.querySelectorAll(".mod1");
 let mod2 = document.querySelectorAll(".mod2");
 let mod3 = document.querySelectorAll(".mod3");
@@ -17,7 +18,7 @@ let question3Hint=["Answer, hint: l","Answer, hint: o"];
 let question3HintIdx=0;
 
 let lifeArray=new Array(3);
-saveHeart();
+loadHeart();
 
 mod1.forEach( (m) => {
     m.addEventListener("click", function () {
@@ -181,4 +182,24 @@ function removeHeart()
 function saveHeart()
 {
     sessionStorage.setItem("lifeArray", JSON.stringify(lifeArray.length));
+}
+
+function loadHeart()
+{
+    let lastTasks = sessionStorage.getItem("lifeArray");
+    if (!lastTasks) return;
+
+    if(lastTasks === "2")
+    {
+        lifeArray.pop();
+        const element = document.getElementById("heart" + 3);
+        element.remove();
+    }
+    else if(lastTasks === "1")
+    {
+        document.getElementById("heart" + 3).remove();
+        document.getElementById("heart" + 2).remove();
+        lifeArray.pop();
+        lifeArray.pop();
+    }
 }
