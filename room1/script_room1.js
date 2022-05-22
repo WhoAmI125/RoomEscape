@@ -104,6 +104,7 @@ function digitCheck(){
      else{
         alert("Try again...");
         //life -;
+        removeHeart();
      }
 }
 function reply_click(clicked_id) {
@@ -114,6 +115,7 @@ function reply_click(clicked_id) {
     else{
         alert("Try again...");
         // life -;
+        removeHeart();
     }
 }
 function handleClick() {
@@ -143,6 +145,7 @@ function handleClick() {
     else{
         alert("Try again..."); // 그렇지 않으면 이상한 힌트를 제공. 
         totalCorrect=0;
+        removeHeart();
     }
 }
 function unlock_room1()
