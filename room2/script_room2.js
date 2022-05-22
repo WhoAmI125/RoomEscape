@@ -1,5 +1,5 @@
 //Set the heart array
-var lifeArray = new Array(3)
+var lifeArray = new Array(5)
 loadHeart();
 
 // Get the modal by modal id
@@ -242,10 +242,9 @@ function removeHeart()
     element.remove();
     lifeArray.pop();
     if (lifeArray.length == 0)
-    {
-            
-        lifeArray = new Array(3)
-        document.location.reload();
+    {    
+        lifeArray = new Array(5);
+        document.location.assign("https://whoami125.github.io/RoomEscape/");
     }
     saveHeart();
 }
@@ -260,16 +259,36 @@ function loadHeart()
     let lastTasks = sessionStorage.getItem("lifeArray");
     if (!lastTasks) return;
 
+    if(lastTasks === "4")
+    {
+        lifeArray.pop();
+        const element = document.getElementById("heart" + 5);
+        element.remove();
+    }
+    if(lastTasks === "3")
+    {
+        lifeArray.pop();
+        lifeArray.pop();
+        document.getElementById("heart" + 5).remove();
+        document.getElementById("heart" + 4).remove();
+    }
     if(lastTasks === "2")
     {
         lifeArray.pop();
-        const element = document.getElementById("heart" + 3);
-        element.remove();
+        lifeArray.pop();
+        lifeArray.pop();
+        document.getElementById("heart" + 5).remove();
+        document.getElementById("heart" + 4).remove();
+        document.getElementById("heart" + 3).remove();
     }
     else if(lastTasks === "1")
     {
+        document.getElementById("heart" + 5).remove();
+        document.getElementById("heart" + 4).remove();
         document.getElementById("heart" + 3).remove();
         document.getElementById("heart" + 2).remove();
+        lifeArray.pop();
+        lifeArray.pop();
         lifeArray.pop();
         lifeArray.pop();
     }
