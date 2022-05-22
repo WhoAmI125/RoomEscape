@@ -12,13 +12,64 @@
     	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
 </head>
 <body>
-    
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel" style="font-weight: bold;">Hajong Kim</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    방탈출이라는 아이디어를 가지고 처음 시작했을 땐 매우 간단했는데 팀원들이랑 회의하면서 여러 가지 요소들을 추가해 아이디어 뼈대에 살을 붙이고, 오류를 수정하면서 성형하자 다들 만족할만한 결과물이 나온 것 같다. 오픈소스소프트웨어실습 과목에서 배웠던 이론 내용들을 파이널 프로젝트에 활용하면서 단순히 머리로 이해하는 것을 넘어서 어떻게 사용해야 할지까지 배울 수 있던 유익한 시간이었던 것 같다.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">To. 박현준</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel2" style="font-weight: bold;">HyunJoon Park</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>깃으로 파일도 날려먹어보고 이상한 파일도 올려 대참사도 만들어봤지만 그래도 깃으로 인해 그룹으로 협업을 빠르게 할 수 있어 좋았다!</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal">To. Yumin Heo</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel3" style="font-weight: bold;">Yumin Heo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>깃허브로 개인프로젝트 말고 팀프로젝트를 해본게 처음이었는데 굉장히 유익한 경험이었다. 평소 좋아했던 방탈출 게임을 직접 제작하는 것도 재미있었고 좋은 경험이었다.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
     <div id="popup_bg">
         <div class="ending_window">
         </div>
     </div>
     <div id="ending_text"><br>
         <div id="ending_txtContents">You escaped. Congratulations!</div><br>
+        <a id="cookieModal" class="btn btn-info position-absolute top-50 start-50 translate-middle" data-bs-toggle="modal" href="#exampleModalToggle" role="button" style="z-index: 100; display: none;">Thank You for the Play</a>
     </div>
     
     <div class="c_maze">
