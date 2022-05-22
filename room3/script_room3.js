@@ -127,17 +127,17 @@ function speechBubbleWorker() { //speechbubble 문제 구현 함수.
     }
 
     if (amountCorrect == totalCorrect) { // 모든 문제를 맞추면 올바른 힌트.
-        alert("학생은 js 기본기가 있네요! 첫번재 글자는 s입니다.");
+        alert("Good job studying javascript! First letter is 's'.");
 
-        document.getElementById("btnSpeechBubble").textContent = "첫번째 과제를 가볍게 통과했군... 다음은 모니터를 조사해봐!";
+        document.getElementById("btnSpeechBubble").textContent = "Good job passing the first assignment... Look at the monitor next!";
         modalSpeechBubble.style.display = "none";
 
     }
     else {
         removeHeart();
-        alert("모든 문제를 맞춰야 자물쇠 첫번재 글자 힌트를 얻을 수 있습니다."); // 그렇지 않으면 이상한 힌트를 제공.
-        alert("틀리셨으니 하트 한 개 차감합니다. 남은 하트:"+lifeArray.length+"개. \n 하트 3개가 모두 차감되면 게임 오버");
-        document.getElementById("btnSpeechBubble").textContent = "첫번째 과제도 못한다니.. 실망이야!";
+        alert("Need to solve all the questions for the first hint."); // 그렇지 않으면 이상한 힌트를 제공.
+        setTimeout(function(){ alert("Wrong answer. Left heart:"+lifeArray.length+". \nIf all 5 hearts are gone, game over!"); }, 300);
+        document.getElementById("btnSpeechBubble").textContent = "You can't even do first question?... Disappointed!";
         totalCorrect = 0;
        
     }
@@ -148,14 +148,14 @@ function reply_click(clicked_id) {
     var answer = 3
     var choice = clicked_id
     if (answer == choice) { // 정답이면 방탈출 힌트 제공.
-        alert("정답, 두번째 글자는 a입니다");
-        document.getElementById("btnSpeechBubble").textContent = "간단한 건 알고 있구만.. 옆에 큐브를 조사해봐";
+        alert("Correct, second letter is 'a'");
+        document.getElementById("btnSpeechBubble").textContent = "Good job. Look at the cube next";
         modalMonitor.style.display = "none";
 
     }
     else { // 틀리면 페이지가 새로고침되어 다시 시작
         removeHeart();
-        alert("오답, 빵야!");
+        alert("Wrong, BAaang!");
         document.location.reload();
     }
 }
@@ -163,7 +163,7 @@ function reply_click(clicked_id) {
 // 자물쇠 형식.
 function digitCheck() {
     if (document.getElementById('first').value == 1 && document.getElementById('second').value == 6 && document.getElementById('third').value == 0 && document.getElementById('fourth').value == 1) {
-        alert("정답, 힌트 제공");
+        alert("Good job, 힌트 제공");
     }
     else {
         removeHeart();
@@ -174,7 +174,7 @@ function digitCheck() {
 }
 
 function dontouch() {
-    document.getElementById("btnSpeechBubble").textContent = "클릭해서 조교를 귀찮게 하지 마라!";
+    document.getElementById("btnSpeechBubble").textContent = "Do not click at me! I need sleep!";
 }
 
 function FillInTheBlank() {
@@ -211,15 +211,15 @@ function FillInTheBlank() {
 
 
     if (numberCorrect == totalCorrect) {
-        alert("정답, 세번째 글자는 long의 l입니다");
-        document.getElementById("btnSpeechBubble").textContent = "제법이네요 학생.. 프로젝터 스크린을 조사해봐";
+        alert("Correct, the third letter is 'l'");
+        document.getElementById("btnSpeechBubble").textContent = "Good... Check the projector screen";
         modalCube.style.display = "none";
     }
     else {
         removeHeart();
         let numberWrong = totalCorrect - numberCorrect;
-        alert("현재 틀린 개수는 " + numberWrong + "입니다. 분발하세요. \n 틀리셨으니 하트 한 개 차감합니다. 남은 하트:"+lifeArray.length+"개. \n 하트 3개가 모두 차감되면 게임 오버");
-        document.getElementById("btnSpeechBubble").textContent = "넌 못 지나간다!";
+        alert("Current wrong is " + numberWrong + ". Work Harder! \nOne heart discard. Left heart:"+lifeArray.length+". \nIf all 5 is gone, game over");
+        document.getElementById("btnSpeechBubble").textContent = "You can't go!!!";
         totalCorrect = 0;
     }
 
@@ -241,13 +241,13 @@ function jsLogoWorker() {
     }
 
     if (amountCorrect == 1) {
-        alert("정답입니다. 마지막 글자는 h였습니다. 거의 끝이에요..!");
-        document.getElementById("btnSpeechBubble").textContent = "5가지 글자들 기억하지? 잘 가!";
+        alert("Good job. Last letter was 'h'. Almost Done..!");
+        document.getElementById("btnSpeechBubble").textContent = "Remember all 5 letters? Good bye!";
         modalJsLogo.style.display = "none";
     }
     else {
         removeHeart();
-        alert("땡! 처음부터 다시하세요");
+        alert("Wrong! start AGAIN!");
     }
 
 }
@@ -280,14 +280,14 @@ function mcqCheck(){
 
 
     if (amountCorrect == totalCorrect) {
-        alert("정답입니다. 네번째 글자는 a였습니다.!");
-        document.getElementById("btnSpeechBubble").textContent = "마지막으로 액자를 조사해봐! 화이팅이다 ";
+        alert("Good job. the fourth letter was 'a'!");
+        document.getElementById("btnSpeechBubble").textContent = "Check on the photo frame last!";
         modalProjectorScreen.style.display = "none";
     }
     else {
         removeHeart();
-        alert("모든 문제를 맞춰야 자물쇠 첫번재 글자 힌트를 얻을 수 있습니다.\n 틀리셨으니 하트 한 개 차감합니다. 남은 하트:"+lifeArray.length+"개. \n 하트 3개가 모두 차감되면 게임 오버");
-        document.getElementById("btnSpeechBubble").textContent = "좀만 더 잘해봐...!!";
+        alert("Need to answer all to get hint.\nLeft heart is:"+lifeArray.length+". \nGame over if all 5 hearts are gone!");
+        document.getElementById("btnSpeechBubble").textContent = "Work harder...!!";
         totalCorrect = 0;
 
     }
