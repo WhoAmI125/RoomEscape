@@ -76,7 +76,7 @@
     background-size: cover;
     width: 18vw;  /* vw를 쓰면 윈도우 resize 할 때 객체도 resize 가능 */
     height: 18vw; /* Relative to 1% of the width of the viewport*/
-    bottom: 180px;
+    bottom: 130px;
     right: 6%;
 
 }
@@ -87,7 +87,7 @@
 
     width: 4vw;
     height: 4vw;
-    bottom: 190px;
+    bottom: 140px;
     right: 70%;
 
 }
