@@ -5,7 +5,7 @@ Room Escape Game
 
 Our project "Escape Room" tried to solve the problem that learning new lessons can be boring by interacting questions about HTML, Git, and JavaScript with Room Escape. Our project offers visual entertainment that attracts users and provides entertainment while solving the questions.
 
-The web page provides several different questions inside the room. The user can only open the exit and escape the room by solving all problems and obtaining hints by solving the questions.
+The web page provides several different questions inside the room. The user can only open the exit and escape the room by solving all problems and obtaining hints by solving the questions. Thank you for the attention!
 
 **Introduction**
 
